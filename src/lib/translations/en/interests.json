@@ -1,0 +1,130 @@
+{
+    "title": "Interests & Passions",
+    "metaDescription": "Pasquale Carmine Carbone's interests and passions: programming, technological innovation, continuous learning and problem solving.",
+    "header": {
+        "title": "Interests & Passions",
+        "description": "What motivates me, inspires me and guides my professional and personal growth"
+    },
+    "openSource": {
+        "title": "Open Source & Community",
+        "description": "Actively contributing to the tech community through open source projects and knowledge sharing.",
+        "details": [
+            "Development and maintenance of open source libraries",
+            "Participation in technical discussions on GitHub",
+            "Mentoring junior developers",
+            "Contributions to existing community projects"
+        ],
+        "projects": {
+            "fastapiController": {
+                "name": "fastapi-router-controller",
+                "description": "FastAPI utility library that simplifies controller and routing management.",
+                "impact": "Simplifies FastAPI REST API development by reducing boilerplate code by 40%"
+            },
+            "fastapiBoilerplate": {
+                "name": "fastapi-mvc-boilerplate",
+                "description": "FastAPI project template with pre-configured MVC architecture and best practices.",
+                "impact": "Accelerates FastAPI project startup with enterprise-ready structure"
+            }
+        }
+    },
+    "smartHome": {
+        "title": "Smart Home & Home Automation",
+        "description": "Design and implement home automation solutions to simplify daily life.",
+        "details": [
+            "Complete system with HomeAssistant as central hub",
+            "Custom automations for energy saving",
+            "Integration of IoT devices from different manufacturers",
+            "Development of custom integrations when needed"
+        ],
+        "projects": {
+            "switchbotRemote": {
+                "name": "ha-switchbot-remote",
+                "description": "Custom HomeAssistant integration supporting unofficially supported SwitchBot Remote devices.",
+                "impact": "Enables control of SwitchBot Remote devices via HomeAssistant, filling a gap in the ecosystem"
+            },
+            "lgTvControl": {
+                "name": "LG TV Control Server",
+                "description": "Node.js server to control LG TVs via Google Home, enabling non-native features.",
+                "impact": "Enables complete voice control of LG TVs via Google Home with custom commands"
+            }
+        }
+    },
+    "innovation": {
+        "title": "Technological Innovation",
+        "description": "Constantly exploring emerging technologies and their application potential.",
+        "details": [
+            "Experimentation with AI and Machine Learning",
+            "Rapid prototyping of new ideas",
+            "Participation in hackathons and contests",
+            "Study of emerging technologies (Web3, IoT, Edge Computing)"
+        ],
+        "projects": {
+            "aiFaq": {
+                "name": "AI FAQ Chatbot (MongoDB Hackathon Winner)",
+                "description": "Intelligent chatbot for corporate FAQs using MongoDB Atlas Vector Search and FireworksAI.",
+                "impact": "1st place at MongoDB Hackathon 2024 - Reduces customer support load by 60%"
+            },
+            "smartTeacher": {
+                "name": "Smart Teacher (KPN Hackathon)",
+                "description": "Voice assistant for learning using Google Assistant and Google Home.",
+                "impact": "3rd place at KPN ITV Hackathon 2019 - Improves students' study experience"
+            }
+        }
+    },
+    "travel": {
+        "title": "Travel & Cultures",
+        "description": "Passionate about travel, discovering new cultures and drawing inspiration for personal and professional growth.",
+        "details": [
+            "Exploration of different cultures and traditions",
+            "International networking with tech professionals",
+            "Learning new languages and perspectives",
+            "Travel photography and experience documentation"
+        ]
+    },
+    "continuousLearning": {
+        "title": "Continuous Learning",
+        "description": "Dedicated constant time to professional development and personal growth.",
+        "details": [
+            "Reading technical and personal growth books",
+            "Participation in conferences and tech webinars",
+            "Online courses on specialized platforms",
+            "Experimentation with personal projects"
+        ]
+    },
+    "automation": {
+        "title": "Automation & Productivity",
+        "description": "Optimization of daily processes through automation and productivity tools.",
+        "details": [
+            "Automation scripts for repetitive tasks",
+            "Configuration of custom workflows",
+            "Development environment optimization",
+            "Creation of shortcuts and macros for efficiency"
+        ]
+    },
+    "values": {
+        "title": "Personal Values",
+        "curiosity": {
+            "title": "Curiosity",
+            "description": "Curiosity is the engine of innovation. Every new technology is an opportunity for growth."
+        },
+        "sharing": {
+            "title": "Sharing",
+            "description": "Knowledge grows when shared. I contribute to the tech community every day."
+        },
+        "quality": {
+            "title": "Quality",
+            "description": "I prefer to do fewer things but do them well. Code quality is a reflection of who we are."
+        },
+        "impact": {
+            "title": "Impact",
+            "description": "Every project must have a positive impact. Technology must improve people's lives."
+        }
+    },
+    "quote": {
+        "text": "The passion for technology is not just about writing code, it's about imagining a better future and building it one function at a time.",
+        "author": "My personal philosophy"
+    },
+    "mainProjects": "Main Projects",
+    "openProject": "Open project",
+    "inNewTab": "in a new tab"
+}

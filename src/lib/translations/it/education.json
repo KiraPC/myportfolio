@@ -1,0 +1,82 @@
+{
+    "title": "Formazione e Attività",
+    "metaDescription": "Il mio percorso educativo e di formazione: studi universitari, certificazioni e corsi di specializzazione.",
+    "header": {
+        "title": "Educazione e Formazione",
+        "description": "Un percorso di apprendimento continuo che combina formazione accademica solida, certificazioni professionali e partecipazione attiva alla community tech."
+    },
+    "university": {
+        "institution": "Università degli Studi di Catanzaro \"Magna Graecia\"",
+        "degree": "Laurea in Ingegneria Informatica e Biomedica",
+        "description": "Percorso di studi focalizzato sull'intersezione tra informatica e scienze biomediche, con particolare attenzione allo sviluppo di soluzioni software per il settore sanitario e tecnologie innovative."
+    },
+    "awsCertification": {
+        "institution": "Amazon Web Services",
+        "degree": "AWS Certified Developer - Associate",
+        "description": "Certificazione che dimostra competenze approfondite nello sviluppo e nella manutenzione di applicazioni su piattaforma AWS, includendo servizi cloud, deployment e best practices di sicurezza."
+    },
+    "safeCertification": {
+        "institution": "Scaled Agile",
+        "degree": "Certified SAFe 4 Practitioner",
+        "description": "Certificazione in metodologie Agile su larga scala, dimostrando competenze nella gestione di progetti complessi e nella collaborazione in team distribuiti seguendo il framework SAFe."
+    },
+    "kpnHackathon": {
+        "institution": "KPN ITV Hackathon",
+        "degree": "3° Posto - Smart Teacher Project",
+        "description": "Progetto innovativo di un Smart Teacher utilizzando Google Assistant e Google Home per supportare gli studenti nello studio, combinando AI conversazionale e tecnologie vocali."
+    },
+    "mongodbHackathon": {
+        "institution": "MongoDB Hackathon",
+        "degree": "1° Posto - AI Chatbot for Enterprise FAQ",
+        "description": "Sviluppo di un chatbot intelligente utilizzando MongoDB Atlas con vector search e FireworksAI per la gestione automatica delle FAQ aziendali, dimostrando competenze in AI e database vettoriali."
+    },
+    "continuousLearning": {
+        "title": "Apprendimento Continuo",
+        "intro": {
+            "title": "La tecnologia evolve, e anch'io",
+            "description": "Nel mondo tech l'apprendimento non si ferma mai. Dedico costantemente tempo allo studio di nuove tecnologie, partecipazione a conferenze e sperimentazione con progetti personali per rimanere sempre aggiornato."
+        },
+        "cloudTechnologies": {
+            "area": "Cloud Technologies",
+            "description": "Continuo aggiornamento su AWS, Azure e tecnologie serverless"
+        },
+        "artificialIntelligence": {
+            "area": "Artificial Intelligence",
+            "description": "Studio di LLM, RAG systems e applicazioni AI moderne"
+        },
+        "modernFrameworks": {
+            "area": "Modern Frameworks",
+            "description": "Esplorazione di nuovi framework e pattern di sviluppo"
+        },
+        "devopsAutomation": {
+            "area": "DevOps & Automation",
+            "description": "Approfondimento di pratiche DevOps e automazione"
+        }
+    },
+    "philosophy": {
+        "title": "La mia filosofia di apprendimento",
+        "quote": "L'apprendimento è un viaggio, non una destinazione. Ogni progetto è un'opportunità per crescere, ogni sfida è un'occasione per innovare.",
+        "pillars": {
+            "learn": {
+                "title": "Learn",
+                "description": "Studio costante di nuove tecnologie"
+            },
+            "build": {
+                "title": "Build",
+                "description": "Applicazione pratica attraverso progetti"
+            },
+            "share": {
+                "title": "Share",
+                "description": "Condivisione delle conoscenze con la community"
+            }
+        }
+    },
+    "timeline": {
+        "title": "Percorso Formativo"
+    },
+    "badges": {
+        "degree": "Laurea",
+        "certification": "Certificazione",
+        "achievement": "Riconoscimento"
+    }
+}

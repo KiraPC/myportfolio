@@ -1,0 +1,30 @@
+{
+    "name": "Pasquale Carmine Carbone",
+    "jobTitle": "Full Stack Software Engineer",
+    "resume": "Curriculum",
+    "navigation": {
+        "home": "Home",
+        "experiences": "Esperienze",
+        "education": "Formazione",
+        "skills": "Competenze",
+        "interests": "Interessi",
+        "contact": "Contatti"
+    },
+    "footer": {
+        "personalInfo": {
+            "description": "Sviluppatore appassionato di tecnologie innovative specializzato in architetture cloud e automazione"
+        },
+        "social": {
+            "title": "Seguimi",
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "email": "Email"
+        },
+        "copyright": "Tutti i diritti riservati.",
+        "madeWith": "Sviluppato con ❤️ usando SvelteKit e TailwindCSS"
+    },
+    "language": {
+        "italian": "Italiano",
+        "english": "English"
+    }
+}

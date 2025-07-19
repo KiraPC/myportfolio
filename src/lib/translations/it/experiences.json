@@ -1,0 +1,109 @@
+{
+    "title": "Esperienze Lavorative",
+    "metaDescription": "Scopri le mie esperienze lavorative come Full Stack Software Engineer: progetti realizzati, tecnologie utilizzate e competenze acquisite.",
+    "subtitle": "Un percorso professionale ricco di sfide tecniche, innovazione e crescita continua attraverso progetti di grande impatto e tecnologie all'avanguardia.",
+    "mainProjects": "Progetti principali",
+    "impact": "Impatto",
+    "sideProject": "Side Project",
+    "ctaTitle": "Interessato a collaborare?",
+    "ctaDescription": "Sono sempre aperto a nuove sfide e progetti interessanti",
+    "ctaButton": "Contattami",
+    "posteItaliane": {
+        "role": "Full Stack Software Engineer",
+        "period": "2022 - presente",
+        "description": "Sviluppo di applicazioni web, collaborazione con team cross-funzionali, implementazione di soluzioni software scalabili per una delle principali aziende italiane nel settore postale e finanziario.",
+        "projects": {
+            "nuovaAreaComunicazioni": {
+                "name": "Nuova Area Comunicazioni",
+                "description": "Design e sviluppo dell'architettura backend cloud-native per la nuova piattaforma di notifiche di Poste Italiane. Sistema progettato per gestire comunicazioni massive per oltre 40 milioni di clienti con circa 300 messaggi per utente. Architettura serverless su AWS con microservizi Java Spring deployati su cluster RedHat OpenShift. Implementazione di server SMTP in Golang per retrocompatibilità, sistema di reindicizzazione OpenSearch per ottimizzare performance e rilevanza dei risultati. Processo di migrazione di dati legacy gestito con applicazioni Java ad alta concorrenza utilizzando blocking queue e regole di trasformazione implementate con strutture dati Trie per performance ottimali.",
+                "impact": "Migrazione completa di 40M utenti dal sistema legacy, riduzione del 70% dei tempi di invio per comunicazioni massive, ottimizzazione delle performance di ricerca e gestione messaggi. Sistema idempotente con gestione degli errori attraverso DynamoDB e retry automatici."
+            },
+            "dataProducts": {
+                "name": "DataProducts per DataMesh",
+                "description": "Sviluppo di Notebook PySpark su Azure Databricks per la nuova piattaforma DataMesh aziendale. Implementazione di pipeline dati schedulate tramite Azure DataFactory con approccio a 3 livelli (Bronze, Silver, Gold). I dati vengono raccolti da Azure EventHub, trasformati e memorizzati in Azure Blob Storage utilizzando formato Parquet e Delta Framework per garantire ACID compliance e versioning dei dati.",
+                "impact": "Automatizzazione completa del processo di trasformazione dati, miglioramento significativo della qualità e accessibilità dei dati per analisi business, implementazione di data lineage e governance."
+            },
+            "assuranceConsoles": {
+                "name": "Assurance Consoles",
+                "description": "Progettazione e sviluppo delle console di assurance companion per supportare le diverse applicazioni sviluppate dal team in produzione. Console sviluppate utilizzando framework Svelte con implementazione sia Client Side Rendering (CSR) che Server Side Rendering (SSR) per ottimizzare performance ed esperienza utente. Le console permettono ai team di produzione di analizzare dati applicativi e recuperare informazioni critiche per troubleshooting e monitoring.",
+                "impact": "Miglioramento del 40% dell'efficienza operativa per i team di produzione, riduzione significativa dei tempi di debugging e risoluzione problemi in ambiente produttivo."
+            },
+            "smartCatalog": {
+                "name": "Smart Catalog",
+                "description": "Progettazione e sviluppo dello Smart Catalog, sistema di gestione interna per il vasto catalogo prodotti di Poste Italiane. Implementazione di interfaccia utente con struttura ad albero user-friendly utilizzando SvelteKit, Tailwind CSS e Flowbite. Sistema che consente ai team interni di gestire e pubblicare prodotti in produzione attraverso workflow strutturati. Implementazione completa di monitoring e tracing per observability e performance tracking.",
+                "impact": "Riduzione del 50% dei tempi di gestione del catalogo prodotti, miglioramento significativo dell'esperienza utente nella navigazione di cataloghi complessi, implementazione di metriche di performance e monitoring avanzato."
+            }
+        }
+    },
+    "enel": {
+        "role": "Data Software Engineer",
+        "period": "2020 - 2022",
+        "description": "Sviluppo di soluzioni software innovative per il settore energetico, focus su piattaforme IoT, machine learning e automazione dei processi. Supporto allo sviluppo di architetture scalabili e partecipazione a progetti di trasformazione digitale.",
+        "projects": {
+            "iotPlatform": {
+                "name": "Enel X IoT Devices Platform",
+                "description": "Sviluppo di microservizi per la piattaforma Enel X dedicata alla gestione di dispositivi IoT su larga scala. Architettura costruita con Python e FastAPI, MongoDB come database principale con Beanie ODM per ottimizzazione delle query. Il sistema espone sia API REST per la comunicazione con dispositivi IoT che API gRPC per comunicazione inter-service ad alta performance. Implementazione di broker Kafka per gestione di task asincroni e garantire scalabilità nella gestione di migliaia di dispositivi connessi simultaneamente.",
+                "impact": "Riduzione del 25% dei tempi di risposta della piattaforma, supporto di un incremento del 40% del volume di dati processati, gestione efficiente di migliaia di dispositivi IoT con alta disponibilità e resilienza."
+            },
+            "mlPlatform": {
+                "name": "Machine Learning Platform",
+                "description": "Contributo allo sviluppo del framework per la piattaforma di Machine Learning aziendale con implementazione di approccio MLOps completo. Utilizzo della suite Atlassian per Repository Manager (BitBucket) e strumenti CI/CD (Bamboo), integrazione con servizi AWS per pipeline ML automatizzate (StepFunctions, Lambda, SageMaker). Sviluppo di catalogo serverless per raccolta e indicizzazione di deliverable ML utilizzando Lambda schedulati e AWS ElasticSearch, esposto tramite API Gateway.",
+                "impact": "Accelerazione del 60% nell'avvio e sviluppo di nuove applicazioni ML, riduzione del 45% dei tempi di ricerca e discovery delle risorse ML, standardizzazione dei processi di deployment e monitoring."
+            },
+            "dataCatalog": {
+                "name": "Common Data Catalog",
+                "description": "Sviluppo del catalogo dati comune aziendale utilizzando Angular 9 con Material Design per l'interfaccia utente, server Wildfly per il backend che espone API REST per integrazione con altri sistemi. MongoDB utilizzato come database principale per memorizzazione e gestione metadati. Sistema progettato per centralizzare la gestione delle risorse dati aziendali e facilitare la discovery e governance dei dati.",
+                "impact": "Centralizzazione efficace delle risorse dati aziendali, miglioramento della data governance e accessibilità delle informazioni per i team di sviluppo e business."
+            },
+            "dataScienceSupport": {
+                "name": "Supporto Data Science per ML Models",
+                "description": "Progettazione e sviluppo di servizi API scalabili basati su architettura microservizi per supportare il team Data Science nel deployment di modelli ML in produzione. Utilizzo di FastAPI come framework principale, deployment su cluster Kubernetes tramite pipeline CI/CD seguendo GitFlow. Sviluppo di strumenti ETL per processamento di dataset diagnostici complessi, implementazione di pipeline automatizzate per build, testing e deployment di librerie Python personalizzate con generazione automatica della documentazione.",
+                "impact": "Miglioramento del 35% nell'efficienza di preparazione dei dati per training ML, riduzione del 50% dei tempi di rilascio delle librerie personalizzate, accelerazione significativa del time-to-market per modelli ML."
+            }
+        }
+    },
+    "accenture": {
+        "role": "Software Engineer",
+        "period": "2017 - 2020",
+        "description": "Sviluppo di soluzioni software enterprise, apprendimento delle best practices di sviluppo software, partecipazione a progetti di trasformazione digitale per grandi aziende. Focus su architetture distribuite, API design e cloud computing.",
+        "projects": {
+            "applicationGateway": {
+                "name": "Application Gateway Layer",
+                "description": "Progettazione e sviluppo di Web Server REST in Node.js utilizzando Express.js per esporre API REST di microservizi ai client esterni senza necessità di orchestrazione diretta. Implementazione seguendo metodologie Agile e pattern Design First Development per garantire qualità e manutenibilità del codice. Sviluppo di suite di test automatizzati completa utilizzando Chai e Mocha per garantire reliability e ridurre regressioni.",
+                "impact": "Riduzione del 40% dei bug in produzione attraverso implementazione di test automatizzati completi, miglioramento dell'affidabilità dell'applicazione e accelerazione dei cicli di sviluppo."
+            },
+            "modularGateway": {
+                "name": "Modular Application Gateway Layer",
+                "description": "Progettazione e sviluppo della modularizzazione del WebServer Application Gateway Layer con approccio plugin-based per costruzione di microservizi scalabili. Utilizzo di TypeScript e implementazione del pattern IoC (Inversion of Control) per garantire modularità e disaccoppiamento. Ogni plugin rappresenta un pacchetto npm indipendente per API REST riutilizzabili, permettendo sviluppo parallelo e indipendente dei team.",
+                "impact": "Riduzione del 50% dei tempi di sviluppo complessivi, miglioramento significativo della separazione delle responsabilità, facilitazione dello sviluppo parallelo di team multipli."
+            },
+            "websocketGateway": {
+                "name": "WebSocket Gateway",
+                "description": "Progettazione e sviluppo di WebSocket Gateway per gestione di notifiche in tempo reale tra client e server. Implementazione di server WebSocket in Node.js utilizzando framework Socket.IO per garantire comunicazione bidirezionale efficiente e a bassa latenza. Sistema progettato per gestire connessioni multiple simultanee con alta performance.",
+                "impact": "Implementazione di comunicazione bidirezionale efficiente e a bassa latenza, miglioramento significativo dell'esperienza utente per applicazioni real-time."
+            },
+            "cloudNative": {
+                "name": "Soluzioni Cloud-Native AWS",
+                "description": "Costruzione di pipeline CI/CD complete per deployment di applicazioni serverless su AWS utilizzando Jenkins e SAM (Serverless Application Model). Sviluppo di sistema serverless per gestione compliance GDPR utilizzando AWS CloudFormation, Lambda, API Gateway e DynamoDB. Implementazione di architettura serverless per streaming di log CloudWatch verso AWS ElasticSearch Service con dashboard Kibana per monitoring e observability avanzati.",
+                "impact": "Miglioramento del 60% nelle capacità di monitoring delle applicazioni, garanzia di compliance GDPR automatizzata, riduzione significativa dei costi operativi attraverso architetture serverless."
+            },
+            "rosTurtlebot": {
+                "name": "PoC ROS con Turtlebot",
+                "description": "Studio e implementazione di soluzioni innovative con framework Robot Operating System (ROS) per sviluppo di firmware per Turtlebot3 destinati a scenari aziendali nella Supply Chain. Utilizzo di AWS RoboMaker per simulazione dell'applicazione in ambiente cloud gestito e per distribuzione del firmware su flotte robotiche. Integrazione con sensori Lidar per mappatura autonoma e AWS Rekognition per riconoscimento oggetti tramite computer vision.",
+                "impact": "Dimostrazione concreta del potenziale per automazione industriale con capacità di mappatura autonoma degli ambienti e riconoscimento intelligente di oggetti, base per sviluppi futuri in automazione Supply Chain."
+            }
+        }
+    },
+    "tegel": {
+        "role": "Software Architect",
+        "period": "2023 - presente",
+        "description": "Architettura software end-to-end, progettazione e sviluppo di soluzioni SaaS innovative per startup tecnologica. Gestione completa del ciclo di vita del software dalla progettazione al deployment in produzione, con focus su scalabilità e performance.",
+        "projects": {
+            "dwelly": {
+                "name": "Dwelly SaaS Platform",
+                "description": "Progettazione e sviluppo completo di piattaforma SaaS per gestione condominiale che permette di gestire comunicazioni tra condomini, pagamenti delle spese condominiali e gestione documentale. Architettura basata su Node.js con Strapi CMS per gestione contenuti, PostgreSQL come database principale, frontend sviluppato in SvelteKit con Tailwind CSS. Deployment su infrastruttura Kubernetes presso OVH con pipeline CI/CD automatizzate tramite Jenkins.",
+                "impact": "Sviluppo di piattaforma SaaS completa e scalabile per gestione condominiale, architettura resiliente e performante, soluzione innovativa per digitalizzazione del settore immobiliare."
+            }
+        }
+    }
+}

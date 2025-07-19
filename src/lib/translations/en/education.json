@@ -1,0 +1,82 @@
+{
+    "title": "Education and Training",
+    "metaDescription": "My educational and training journey: university studies, certifications and specialization courses.",
+    "header": {
+        "title": "Education and Training",
+        "description": "A continuous learning journey that combines solid academic background, professional certifications and active participation in the tech community."
+    },
+    "university": {
+        "institution": "University of Catanzaro \"Magna Graecia\"",
+        "degree": "Bachelor's Degree in Computer and Biomedical Engineering",
+        "description": "A study path focused on the intersection between computer science and biomedical sciences, with particular attention to developing software solutions for the healthcare sector and innovative technologies."
+    },
+    "awsCertification": {
+        "institution": "Amazon Web Services",
+        "degree": "AWS Certified Developer - Associate",
+        "description": "Certification demonstrating in-depth skills in developing and maintaining applications on AWS platform, including cloud services, deployment and security best practices."
+    },
+    "safeCertification": {
+        "institution": "Scaled Agile",
+        "degree": "Certified SAFe 4 Practitioner",
+        "description": "Certification in large-scale Agile methodologies, demonstrating skills in managing complex projects and collaboration in distributed teams following the SAFe framework."
+    },
+    "kpnHackathon": {
+        "institution": "KPN ITV Hackathon",
+        "degree": "3rd Place - Smart Teacher Project",
+        "description": "Innovative Smart Teacher project using Google Assistant and Google Home to support students in their studies, combining conversational AI and voice technologies."
+    },
+    "mongodbHackathon": {
+        "institution": "MongoDB Hackathon",
+        "degree": "1st Place - AI Chatbot for Enterprise FAQ",
+        "description": "Development of an intelligent chatbot using MongoDB Atlas with vector search and FireworksAI for automatic management of enterprise FAQs, demonstrating skills in AI and vector databases."
+    },
+    "continuousLearning": {
+        "title": "Continuous Learning",
+        "intro": {
+            "title": "Technology evolves, and so do I",
+            "description": "In the tech world, learning never stops. I constantly dedicate time to studying new technologies, participating in conferences and experimenting with personal projects to stay always up to date."
+        },
+        "cloudTechnologies": {
+            "area": "Cloud Technologies",
+            "description": "Continuous updates on AWS, Azure and serverless technologies"
+        },
+        "artificialIntelligence": {
+            "area": "Artificial Intelligence",
+            "description": "Study of LLMs, RAG systems and modern AI applications"
+        },
+        "modernFrameworks": {
+            "area": "Modern Frameworks",
+            "description": "Exploration of new frameworks and development patterns"
+        },
+        "devopsAutomation": {
+            "area": "DevOps & Automation",
+            "description": "Deep dive into DevOps practices and automation"
+        }
+    },
+    "philosophy": {
+        "title": "My learning philosophy",
+        "quote": "Learning is a journey, not a destination. Every project is an opportunity to grow, every challenge is a chance to innovate.",
+        "pillars": {
+            "learn": {
+                "title": "Learn",
+                "description": "Constant study of new technologies"
+            },
+            "build": {
+                "title": "Build",
+                "description": "Practical application through projects"
+            },
+            "share": {
+                "title": "Share",
+                "description": "Knowledge sharing with the community"
+            }
+        }
+    },
+    "timeline": {
+        "title": "Educational Path"
+    },
+    "badges": {
+        "degree": "Degree",
+        "certification": "Certification",
+        "achievement": "Achievement"
+    }
+}

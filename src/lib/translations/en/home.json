@@ -1,0 +1,43 @@
+{
+    "title": "Pasquale Carmine Carbone - Full Stack Software Engineer",
+    "metaDescription": "Portfolio of Pasquale Carmine Carbone, Full Stack Software Engineer specialized in cloud architectures, microservices and automation. Experience with AWS, SvelteKit, Python, Java and Go.",
+    "hero": {
+        "greeting": "Hi, I'm",
+        "name": "Pasquale",
+        "jobTitle": "Full Stack Software Engineer",
+        "description": "Passionate developer with experience in {strong}cloud architectures{/strong}, {strong}microservices{/strong} and {strong}automation{/strong}. Specialized in designing scalable and innovative solutions.",
+        "contactButton": "Contact me",
+        "experienceButton": "Discover my experiences"
+    },
+    "skills": {
+        "title": "Technologies I use",
+        "description": "A mix of modern languages, frameworks and cloud technologies to create robust and scalable solutions"
+    },
+    "highlights": {
+        "title": "My specializations",
+        "description": "Areas of expertise that allow me to tackle complex challenges and create value for projects",
+        "items": {
+            "cloud": {
+                "title": "Cloud Architectures",
+                "description": "Design and implementation of scalable solutions on AWS"
+            },
+            "microservices": {
+                "title": "Microservices",
+                "description": "Development of distributed architectures and high availability systems"
+            },
+            "automation": {
+                "title": "Automation",
+                "description": "Implementation of CI/CD pipelines and automated processes"
+            },
+            "dataEngineering": {
+                "title": "Data Engineering",
+                "description": "Management and analysis of large data volumes with modern technologies"
+            }
+        }
+    },
+    "cta": {
+        "title": "Ready for new challenges",
+        "description": "I'm always interested in new challenges and new opportunities.",
+        "button": "Contact me"
+    }
+}

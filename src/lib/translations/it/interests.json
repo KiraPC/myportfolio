@@ -1,0 +1,130 @@
+{
+    "title": "Interessi & Passioni",
+    "metaDescription": "Interessi e passioni di Pasquale Carmine Carbone: programmazione, innovazione tecnologica, apprendimento continuo e problem solving.",
+    "header": {
+        "title": "Interessi & Passioni",
+        "description": "Ciò che mi motiva, mi ispira e guida la mia crescita professionale e personale"
+    },
+    "openSource": {
+        "title": "Open Source & Community",
+        "description": "Contribuisco attivamente alla community tech attraverso progetti open source e condivisione delle conoscenze.",
+        "details": [
+            "Sviluppo e mantenimento di librerie open source",
+            "Partecipazione a discussioni tecniche su GitHub",
+            "Mentoring di sviluppatori junior",
+            "Contributi a progetti esistenti della community"
+        ],
+        "projects": {
+            "fastapiController": {
+                "name": "fastapi-router-controller",
+                "description": "Libreria di utilità per FastAPI che semplifica la gestione dei controller e routing.",
+                "impact": "Semplifica lo sviluppo di API REST in FastAPI riducendo il boilerplate code del 40%"
+            },
+            "fastapiBoilerplate": {
+                "name": "fastapi-mvc-boilerplate",
+                "description": "Template di progetto FastAPI con architettura MVC pre-configurata e best practices.",
+                "impact": "Accelera l'avvio di nuovi progetti FastAPI con struttura enterprise-ready"
+            }
+        }
+    },
+    "smartHome": {
+        "title": "Smart Home & Domotica",
+        "description": "Progetto e implemento soluzioni di automazione domestica per semplificare la vita quotidiana.",
+        "details": [
+            "Sistema completo con HomeAssistant come hub centrale",
+            "Automazioni personalizzate per risparmio energetico",
+            "Integrazione dispositivi IoT di diversi produttori",
+            "Sviluppo di integrazioni custom quando necessario"
+        ],
+        "projects": {
+            "switchbotRemote": {
+                "name": "ha-switchbot-remote",
+                "description": "Integrazione custom per HomeAssistant che supporta dispositivi SwitchBot Remote non ufficialmente supportati.",
+                "impact": "Permette il controllo di dispositivi SwitchBot Remote via HomeAssistant, colmando una lacuna nell'ecosistema"
+            },
+            "lgTvControl": {
+                "name": "LG TV Control Server",
+                "description": "Server Node.js per controllare TV LG tramite Google Home, abilitando funzionalità non native.",
+                "impact": "Abilita controllo vocale completo di TV LG via Google Home con comandi personalizzati"
+            }
+        }
+    },
+    "innovation": {
+        "title": "Innovazione Tecnologica",
+        "description": "Esploro costantemente nuove tecnologie emergenti e il loro potenziale applicativo.",
+        "details": [
+            "Sperimentazione con AI e Machine Learning",
+            "Prototipazione rapida di nuove idee",
+            "Partecipazione a hackathon e contest",
+            "Studio di tecnologie emergenti (Web3, IoT, Edge Computing)"
+        ],
+        "projects": {
+            "aiFaq": {
+                "name": "AI FAQ Chatbot (MongoDB Hackathon Winner)",
+                "description": "Chatbot intelligente per FAQ aziendali usando MongoDB Atlas Vector Search e FireworksAI.",
+                "impact": "1° posto al MongoDB Hackathon 2024 - Riduce il carico del supporto clienti del 60%"
+            },
+            "smartTeacher": {
+                "name": "Smart Teacher (KPN Hackathon)",
+                "description": "Assistente vocale per l'apprendimento usando Google Assistant e Google Home.",
+                "impact": "3° posto al KPN ITV Hackathon 2019 - Migliora l'esperienza di studio degli studenti"
+            }
+        }
+    },
+    "travel": {
+        "title": "Viaggi & Culture",
+        "description": "Appassionato di viaggi, scopro nuove culture e traggo ispirazione per la crescita personale e professionale.",
+        "details": [
+            "Esplorazione di diverse culture e tradizioni",
+            "Networking internazionale con professionisti tech",
+            "Apprendimento di nuove lingue e prospettive",
+            "Fotografia di viaggio e documentazione delle esperienze"
+        ]
+    },
+    "continuousLearning": {
+        "title": "Apprendimento Continuo",
+        "description": "Dedico tempo costante all'aggiornamento professionale e alla crescita personale.",
+        "details": [
+            "Lettura di libri tecnici e di crescita personale",
+            "Partecipazione a conferenze e webinar tech",
+            "Corsi online su piattaforme specializzate",
+            "Sperimentazione con progetti personali"
+        ]
+    },
+    "automation": {
+        "title": "Automazione & Productivity",
+        "description": "Ottimizzazione di processi quotidiani attraverso automazione e strumenti di produttività.",
+        "details": [
+            "Script di automazione per task ripetitivi",
+            "Configurazione di workflow personalizzati",
+            "Ottimizzazione dell'ambiente di sviluppo",
+            "Creazione di shortcut e macro per efficienza"
+        ]
+    },
+    "values": {
+        "title": "I Miei Valori",
+        "curiosity": {
+            "title": "Curiosità",
+            "description": "La curiosità è il motore dell'innovazione. Ogni nuova tecnologia è un'opportunità di crescita."
+        },
+        "sharing": {
+            "title": "Condivisione",
+            "description": "La conoscenza cresce quando viene condivisa. Contribuisco alla community tech ogni giorno."
+        },
+        "quality": {
+            "title": "Qualità",
+            "description": "Preferisco fare meno cose ma farle bene. La qualità del codice è un riflesso di chi siamo."
+        },
+        "impact": {
+            "title": "Impatto",
+            "description": "Ogni progetto deve avere un impatto positivo. La tecnologia deve migliorare la vita delle persone."
+        }
+    },
+    "quote": {
+        "text": "La passione per la tecnologia non è solo scrivere codice, è immaginare un futuro migliore e costruirlo una funzione alla volta.",
+        "author": "La mia filosofia personale"
+    },
+    "mainProjects": "Progetti principali",
+    "openProject": "Apri progetto",
+    "inNewTab": "in una nuova scheda"
+}

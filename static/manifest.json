@@ -1,0 +1,21 @@
+{
+  "name": "Pasquale Carmine Carbone - Portfolio",
+  "short_name": "PC Portfolio",
+  "description": "Full Stack Software Engineer specializzato in architetture cloud e microservizi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "developer", "portfolio"],
+  "lang": "it",
+  "dir": "ltr",
+  "orientation": "portrait-primary"
+}

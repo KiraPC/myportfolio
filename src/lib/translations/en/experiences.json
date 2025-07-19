@@ -1,0 +1,109 @@
+{
+    "title": "Work Experience",
+    "metaDescription": "Discover my work experience as a Full Stack Software Engineer: projects completed, technologies used and skills acquired.",
+    "subtitle": "A professional journey rich in technical challenges, innovation and continuous growth through high-impact projects and cutting-edge technologies.",
+    "mainProjects": "Main Projects",
+    "impact": "Impact",
+    "sideProject": "Side Project",
+    "ctaTitle": "Interested in collaborating?",
+    "ctaDescription": "I'm always open to new challenges and interesting projects",
+    "ctaButton": "Contact me",
+    "posteItaliane": {
+        "role": "Full Stack Software Engineer",
+        "period": "2022 - present",
+        "description": "Web application development, cross-functional team collaboration, implementation of scalable software solutions for one of Italy's main postal and financial services companies.",
+        "projects": {
+            "nuovaAreaComunicazioni": {
+                "name": "New Communications Area",
+                "description": "Design and development of cloud-native backend architecture for Poste Italiane's new notification platform. System designed to handle massive communications for over 40 million customers with approximately 300 messages per user. Serverless architecture on AWS with Java Spring microservices deployed on RedHat OpenShift clusters. Implementation of SMTP server in Golang for backward compatibility, OpenSearch reindexing system to optimize performance and result relevance. Legacy data migration process managed with high-concurrency Java applications using blocking queues and transformation rules implemented with Trie data structures for optimal performance.",
+                "impact": "Complete migration of 40M users from legacy system, 70% reduction in sending times for massive communications, optimization of search performance and message management. Idempotent system with error handling through DynamoDB and automatic retries."
+            },
+            "dataProducts": {
+                "name": "DataProducts for DataMesh",
+                "description": "Development of PySpark Notebooks on Azure Databricks for the new corporate DataMesh platform. Implementation of data pipelines scheduled through Azure DataFactory with 3-level approach (Bronze, Silver, Gold). Data collected from Azure EventHub, transformed and stored in Azure Blob Storage using Parquet format and Delta Framework to ensure ACID compliance and data versioning.",
+                "impact": "Complete automation of data transformation processes, significant improvement in data quality and accessibility for business analytics, implementation of data lineage and governance."
+            },
+            "assuranceConsoles": {
+                "name": "Assurance Consoles",
+                "description": "Design and development of companion assurance consoles to support various applications developed by the team in production. Consoles developed using Svelte framework with both Client Side Rendering (CSR) and Server Side Rendering (SSR) implementation to optimize performance and user experience. The consoles allow production teams to analyze application data and retrieve critical information for troubleshooting and monitoring.",
+                "impact": "40% improvement in operational efficiency for production teams, significant reduction in debugging and problem resolution times in production environment."
+            },
+            "smartCatalog": {
+                "name": "Smart Catalog",
+                "description": "Design and development of Smart Catalog, internal management system for Poste Italiane's vast product catalog. Implementation of user interface with user-friendly tree structure using SvelteKit, Tailwind CSS and Flowbite. System that allows internal teams to manage and publish products in production through structured workflows. Complete implementation of monitoring and tracing for observability and performance tracking.",
+                "impact": "50% reduction in product catalog management times, significant improvement in user experience when navigating complex catalogs, implementation of advanced performance metrics and monitoring."
+            }
+        }
+    },
+    "enel": {
+        "role": "Data Software Engineer",
+        "period": "2020 - 2022",
+        "description": "Development of innovative software solutions for the energy sector, focus on IoT platforms, machine learning and process automation. Support in developing scalable architectures and participation in digital transformation projects.",
+        "projects": {
+            "iotPlatform": {
+                "name": "Enel X IoT Devices Platform",
+                "description": "Development of microservices for Enel X platform dedicated to large-scale IoT device management. Architecture built with Python and FastAPI, MongoDB as main database with Beanie ODM for query optimization. The system exposes both REST APIs for communication with IoT devices and gRPC APIs for high-performance inter-service communication. Implementation of Kafka broker for asynchronous task management and to ensure scalability in handling thousands of simultaneously connected devices.",
+                "impact": "25% reduction in platform response times, support for 40% increase in processed data volume, efficient management of thousands of IoT devices with high availability and resilience."
+            },
+            "mlPlatform": {
+                "name": "Machine Learning Platform",
+                "description": "Contribution to the development of the framework for the corporate Machine Learning platform with complete MLOps approach implementation. Use of Atlassian suite for Repository Manager (BitBucket) and CI/CD tools (Bamboo), integration with AWS services for automated ML pipelines (StepFunctions, Lambda, SageMaker). Development of serverless catalog for ML deliverable collection and indexing using scheduled Lambda and AWS ElasticSearch, exposed through API Gateway.",
+                "impact": "60% acceleration in starting and developing new ML applications, 45% reduction in ML resource search and discovery times, standardization of deployment and monitoring processes."
+            },
+            "dataCatalog": {
+                "name": "Common Data Catalog",
+                "description": "Development of corporate common data catalog using Angular 9 with Material Design for user interface, Wildfly server for backend exposing REST APIs for integration with other systems. MongoDB used as main database for metadata storage and management. System designed to centralize corporate data resource management and facilitate data discovery and governance.",
+                "impact": "Effective centralization of corporate data resources, improvement in data governance and information accessibility for development and business teams."
+            },
+            "dataScienceSupport": {
+                "name": "Data Science Support for ML Models",
+                "description": "Design and development of scalable API services based on microservices architecture to support the Data Science team in deploying ML models in production. Use of FastAPI as main framework, deployment on Kubernetes clusters through CI/CD pipelines following GitFlow. Development of ETL tools for processing complex diagnostic datasets, implementation of automated pipelines for building, testing and deploying custom Python libraries with automatic documentation generation.",
+                "impact": "35% improvement in data preparation efficiency for ML training, 50% reduction in custom library release times, significant acceleration of time-to-market for ML models."
+            }
+        }
+    },
+    "accenture": {
+        "role": "Software Engineer",
+        "period": "2017 - 2020",
+        "description": "Development of enterprise software solutions, learning software development best practices, participation in digital transformation projects for large companies. Focus on distributed architectures, API design and cloud computing.",
+        "projects": {
+            "applicationGateway": {
+                "name": "Application Gateway Layer",
+                "description": "Design and development of REST Web Server in Node.js using Express.js to expose REST APIs of microservices to external clients without need for direct orchestration. Implementation following Agile methodologies and Design First Development pattern to ensure code quality and maintainability. Development of complete automated test suite using Chai and Mocha to ensure reliability and reduce regressions.",
+                "impact": "40% reduction in production bugs through implementation of complete automated testing, improvement in application reliability and acceleration of development cycles."
+            },
+            "modularGateway": {
+                "name": "Modular Application Gateway Layer",
+                "description": "Design and development of WebServer Application Gateway Layer modularization with plugin-based approach for building scalable microservices. Use of TypeScript and implementation of IoC (Inversion of Control) pattern to ensure modularity and decoupling. Each plugin represents an independent npm package for reusable REST APIs, allowing parallel and independent development by teams.",
+                "impact": "50% reduction in overall development times, significant improvement in separation of responsibilities, facilitation of parallel development by multiple teams."
+            },
+            "websocketGateway": {
+                "name": "WebSocket Gateway",
+                "description": "Design and development of WebSocket Gateway for managing real-time notifications between client and server. Implementation of WebSocket server in Node.js using Socket.IO framework to ensure efficient bidirectional communication and low latency. System designed to handle multiple simultaneous connections with high performance.",
+                "impact": "Implementation of efficient bidirectional communication with low latency, significant improvement in user experience for real-time applications."
+            },
+            "cloudNative": {
+                "name": "AWS Cloud-Native Solutions",
+                "description": "Construction of complete CI/CD pipelines for serverless application deployment on AWS using Jenkins and SAM (Serverless Application Model). Development of serverless system for GDPR compliance management using AWS CloudFormation, Lambda, API Gateway and DynamoDB. Implementation of serverless architecture for streaming CloudWatch logs to AWS ElasticSearch Service with Kibana dashboards for advanced monitoring and observability.",
+                "impact": "60% improvement in application monitoring capabilities, automated GDPR compliance guarantee, significant reduction in operational costs through serverless architectures."
+            },
+            "rosTurtlebot": {
+                "name": "ROS PoC with Turtlebot",
+                "description": "Study and implementation of innovative solutions with Robot Operating System (ROS) framework for developing Turtlebot3 firmware intended for business scenarios in Supply Chain. Use of AWS RoboMaker for application simulation in managed cloud environment and for firmware distribution on robotic fleets. Integration with Lidar sensors for autonomous mapping and AWS Rekognition for object recognition through computer vision.",
+                "impact": "Concrete demonstration of potential for industrial automation with autonomous environment mapping capabilities and intelligent object recognition, foundation for future developments in Supply Chain automation."
+            }
+        }
+    },
+    "tegel": {
+        "role": "Software Architect",
+        "period": "2023 - present",
+        "description": "End-to-end software architecture, design and development of innovative SaaS solutions for technology startup. Complete management of software lifecycle from design to production deployment, with focus on scalability and performance.",
+        "projects": {
+            "dwelly": {
+                "name": "Dwelly SaaS Platform",
+                "description": "Complete design and development of SaaS platform for condominium management that allows managing communications between residents, condominium expense payments and document management. Architecture based on Node.js with Strapi CMS for content management, PostgreSQL as main database, frontend developed in SvelteKit with Tailwind CSS. Deployment on Kubernetes infrastructure at OVH with automated CI/CD pipelines through Jenkins.",
+                "impact": "Development of complete and scalable SaaS platform for condominium management, resilient and performant architecture, innovative solution for real estate sector digitization."
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "title": "Pasquale Carmine Carbone - Full Stack Software Engineer",
+    "metaDescription": "Portfolio di Pasquale Carmine Carbone, Full Stack Software Engineer specializzato in architetture cloud, microservizi e automazione. Esperienza con AWS, SvelteKit, Python, Java e Go.",
+    "hero": {
+        "greeting": "Ciao, sono",
+        "name": "Pasquale",
+        "jobTitle": "Full Stack Software Engineer",
+        "description": "Sviluppatore appassionato con esperienza in {strong}architetture cloud{/strong}, {strong}microservizi{/strong} e {strong}automazione{/strong}. Specializzato nella progettazione di soluzioni scalabili e innovative.",
+        "contactButton": "Contattami",
+        "experienceButton": "Scopri le mie esperienze"
+    },
+    "skills": {
+        "title": "Tecnologie che utilizzo",
+        "description": "Un mix di linguaggi moderni, framework e tecnologie cloud per creare soluzioni robuste e scalabili"
+    },
+    "highlights": {
+        "title": "Le mie specializzazioni",
+        "description": "Aree di expertise che mi permettono di affrontare sfide complesse e creare valore per i progetti",
+        "items": {
+            "cloud": {
+                "title": "Architetture Cloud",
+                "description": "Progettazione e implementazione di soluzioni scalabili su AWS"
+            },
+            "microservices": {
+                "title": "Microservizi",
+                "description": "Sviluppo di architetture distribuite e sistemi ad alta disponibilità"
+            },
+            "automation": {
+                "title": "Automazione",
+                "description": "Implementazione di pipeline CI/CD e processi automatizzati"
+            },
+            "dataEngineering": {
+                "title": "Data Engineering",
+                "description": "Gestione e analisi di grandi volumi di dati con tecnologie moderne"
+            }
+        }
+    },
+    "cta": {
+        "title": "Pronto a nuovi stimoli",
+        "description": "Sono sempre interessato a nuove sfide e nuove opportunità.",
+        "button": "Contattami"
+    }
+}

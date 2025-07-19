@@ -1,0 +1,81 @@
+{
+    "title": "Contatti",
+    "metaDescription": "Contatta Pasquale Carmine Carbone per progetti, consulenze o collaborazioni. Full Stack Software Engineer specializzato in architetture cloud e microservizi.",
+    "header": {
+        "title": "Parliamo insieme",
+        "description": "Hai un progetto interessante? Un'idea innovativa? O semplicemente vuoi fare due chiacchiere di tecnologia? Sono sempre disponibile per nuove opportunità e collaborazioni."
+    },
+    "form": {
+        "title": "Invia un messaggio",
+        "name": {
+            "label": "Nome",
+            "placeholder": "Il tuo nome completo",
+            "required": "Il nome è obbligatorio"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "la.tua.email@example.com",
+            "required": "L'email è obbligatoria",
+            "invalid": "Formato email non valido"
+        },
+        "subject": {
+            "label": "Oggetto",
+            "placeholder": "Di cosa vuoi parlare?",
+            "required": "L'oggetto è obbligatorio"
+        },
+        "message": {
+            "label": "Messaggio",
+            "placeholder": "Descrivimi il tuo progetto, le tue idee o semplicemente quello di cui vuoi parlare...",
+            "required": "Il messaggio è obbligatorio",
+            "minLength": "Il messaggio deve essere di almeno 10 caratteri"
+        },
+        "submit": "Invia messaggio",
+        "submitting": "Invio in corso...",
+        "success": "Messaggio inviato con successo! Ti risponderò al più presto.",
+        "error": "Errore nell'invio del messaggio. Riprova più tardi."
+    },
+    "info": {
+        "title": "Informazioni di contatto",
+        "email": {
+            "title": "Email",
+            "value": "me@pcarbone.it"
+        },
+        "linkedin": {
+            "title": "LinkedIn",
+            "value": "linkedin.com/in/pasquale-carmine-carbone"
+        },
+        "github": {
+            "title": "GitHub",
+            "value": "github.com/KiraPC"
+        },
+        "location": {
+            "title": "Località",
+            "value": "Italia"
+        }
+    },
+    "availability": {
+        "title": "Disponibilità",
+        "consulting": {
+            "type": "Consulenza",
+            "description": "Disponibile per consulenze tecniche e architetturali"
+        },
+        "projects": {
+            "type": "Progetti",
+            "description": "Interessato a progetti innovativi e sfidanti"
+        },
+        "collaborations": {
+            "type": "Collaborazioni",
+            "description": "Aperto a collaborazioni e partnership tech"
+        },
+        "mentoring": {
+            "type": "Mentoring",
+            "description": "Disponibile per mentoring e formazione"
+        },
+        "responseTime": "Solitamente rispondo entro 24 ore. Per progetti urgenti, sarò lieto di organizzare una chiamata veloce."
+    },
+    "quickActions": {
+        "title": "Azioni veloci",
+        "downloadCV": "Scarica il mio Curriculum",
+        "linkedin": "Collegati su LinkedIn"
+    }
+}

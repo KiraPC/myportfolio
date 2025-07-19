@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- Favicon - Multiple formats for maximum compatibility -->
+		<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/favicon.svg" />
+		<link rel="mask-icon" href="%sveltekit.assets%/favicon.svg" color="#3B82F6" />
+		
+		<!-- Theme color for mobile browsers -->
+		<meta name="theme-color" content="#3B82F6" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#1F2937" media="(prefers-color-scheme: dark)" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- Application metadata -->
+		<meta name="application-name" content="Pasquale Carmine Carbone - Portfolio" />
+		<meta name="author" content="Pasquale Carmine Carbone" />
+		
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+		
+		<script>
+			(function() {
+				const stored = localStorage.getItem('theme');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const theme = stored || (prefersDark ? 'dark' : 'light');
+				
+				if (theme === 'dark') {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+			})();
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

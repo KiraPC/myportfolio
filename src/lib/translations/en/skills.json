@@ -1,0 +1,188 @@
+{
+    "title": "Technical Skills",
+    "metaDescription": "Pasquale Carmine Carbone's technical skills: programming languages, frameworks, cloud computing, databases and development methodologies.",
+    "header": {
+        "title": "Skills & Technologies",
+        "description": "A comprehensive technology toolkit, built through years of practical experience and continuous learning to tackle the challenges of the modern digital world."
+    },
+    "expertise": {
+        "title": "Areas of Expertise",
+        "fullStack": {
+            "title": "Full-Stack Development",
+            "description": "Complete development of modern applications, from user interface to backend microservices",
+            "highlights": [
+                "Modern frontends with SvelteKit and React",
+                "Scalable backends with FastAPI and Spring Boot",
+                "Microservices architectures and API design"
+            ]
+        },
+        "cloudNative": {
+            "title": "Cloud-Native Architecture",
+            "description": "Design and implementation of scalable and resilient cloud solutions",
+            "highlights": [
+                "AWS Lambda, ECS and serverless services",
+                "Containerization with Docker and Kubernetes",
+                "CI/CD pipelines and Infrastructure as Code"
+            ]
+        },
+        "dataEngineering": {
+            "title": "Data Engineering",
+            "description": "Large-scale data management and analysis with modern technologies",
+            "highlights": [
+                "ETL pipelines with Apache Spark and Databricks",
+                "Real-time streaming with Kafka",
+                "Data lakes and vector search with MongoDB"
+            ]
+        },
+        "automation": {
+            "title": "Automation",
+            "description": "Development of automated solutions to optimize processes and workflows",
+            "highlights": [
+                "Python scripts for process automation",
+                "Workflow automation with GitHub Actions",
+                "Automated task scheduling and monitoring"
+            ]
+        },
+        "devops": {
+            "title": "DevOps & Infrastructure",
+            "description": "Complete infrastructure management and automated deployment",
+            "highlights": [
+                "CI/CD pipelines with Jenkins and GitHub Actions",
+                "Infrastructure as Code with CDK and Terraform",
+                "Monitoring and logging with cloud-native tools"
+            ]
+        }
+    },
+    "categories": {
+        "title": "Detailed Technical Skills",
+        "programming": {
+            "name": "Programming Languages",
+            "description": "Languages I use daily to develop innovative solutions",
+            "skills": {
+                "javascript": {
+                    "description": "Full-stack development with Node.js, SvelteKit, and enterprise applications"
+                },
+                "python": {
+                    "description": "Data engineering, ML pipelines, FastAPI and automation"
+                },
+                "java": {
+                    "description": "Spring microservices, enterprise applications on OpenShift"
+                },
+                "go": {
+                    "description": "High-performance microservices, SMTP servers and cloud-native applications"
+                }
+            }
+        },
+        "frameworks": {
+            "name": "Frameworks & Libraries",
+            "description": "Modern frameworks for developing scalable applications",
+            "skills": {
+                "sveltekit": {
+                    "description": "SSR/CSR, advanced routing, performance optimization"
+                },
+                "fastapi": {
+                    "description": "REST/gRPC APIs, automatic validation, OpenAPI documentation"
+                },
+                "springboot": {
+                    "description": "Microservices, Spring Cloud, AWS integration"
+                },
+                "express": {
+                    "description": "API Gateway, custom middleware, modular architectures"
+                },
+                "react": {
+                    "description": "Reusable components, state management, advanced hooks"
+                }
+            }
+        },
+        "cloudDevops": {
+            "name": "Cloud & DevOps",
+            "description": "Cloud technologies and DevOps practices for scalable deployments",
+            "skills": {
+                "aws": {
+                    "description": "Lambda, ECS, S3, SQS, SNS, OpenSearch, StepFunctions, CDK"
+                },
+                "kubernetes": {
+                    "description": "Container orchestration, deployment strategies, monitoring"
+                },
+                "docker": {
+                    "description": "Containerization, multi-stage builds, image optimization"
+                },
+                "cicd": {
+                    "description": "Jenkins, GitHub Actions, automated pipelines, GitFlow"
+                },
+                "azure": {
+                    "description": "Databricks, Data Factory, EventHub, Blob Storage"
+                }
+            }
+        },
+        "database": {
+            "name": "Database & Data",
+            "description": "Data management, from design to advanced analysis",
+            "skills": {
+                "mongodb": {
+                    "description": "Aggregation pipelines, replica sets, vector search"
+                },
+                "postgresql": {
+                    "description": "Query optimization, stored procedures, partitioning"
+                },
+                "opensearch": {
+                    "description": "Indexing, query DSL, performance tuning"
+                },
+                "kafka": {
+                    "description": "Event streaming, consumer groups, fault tolerance"
+                },
+                "spark": {
+                    "description": "PySpark, Delta Lake, data transformations on Databricks"
+                }
+            }
+        },
+        "tools": {
+            "name": "Tools & Methodologies",
+            "description": "Tools and methodologies for efficient and collaborative development",
+            "skills": {
+                "git": {
+                    "description": "Advanced version control, branching strategies, code review"
+                },
+                "agile": {
+                    "description": "SAFe certified, iterative planning, retrospectives"
+                },
+                "testing": {
+                    "description": "Unit testing, integration testing, TDD practices"
+                },
+                "api": {
+                    "description": "REST/gRPC, OpenAPI, versioning, documentation"
+                },
+                "monitoring": {
+                    "description": "Logging, tracing, metrics, alerting, dashboard design"
+                }
+            }
+        }
+    },
+    "philosophy": {
+        "title": "My Technology Philosophy",
+        "quote": "Technology is just a tool. The real value lies in solving real problems for real people, creating solutions that improve life and work.",
+        "principles": {
+            "results": {
+                "title": "Focus on Results",
+                "description": "I always choose the right technology for the problem, not the trendiest one"
+            },
+            "improvement": {
+                "title": "Continuous Improvement",
+                "description": "Constant refactoring and skill development"
+            },
+            "collaboration": {
+                "title": "Collaboration",
+                "description": "Knowledge sharing and team growth"
+            }
+        }
+    },
+    "levelLabels": {
+        "expert": "Expert",
+        "advanced": "Advanced",
+        "intermediate": "Intermediate",
+        "beginner": "Beginner"
+    },
+    "yearsLabel": "years of experience",
+    "yearsSuffix": "years of experience",
+    "competenze": "skills"
+}

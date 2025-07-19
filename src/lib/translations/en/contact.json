@@ -1,0 +1,81 @@
+{
+    "title": "Contact",
+    "metaDescription": "Contact Pasquale Carmine Carbone for projects, consultations or collaborations. Full Stack Software Engineer specialized in cloud architectures and microservices.",
+    "header": {
+        "title": "Let's talk together",
+        "description": "Have an interesting project? An innovative idea? Or simply want to chat about technology? I'm always available for new opportunities and collaborations."
+    },
+    "form": {
+        "title": "Send a message",
+        "name": {
+            "label": "Name",
+            "placeholder": "Your full name",
+            "required": "Name is required"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "your.email@example.com",
+            "required": "Email is required",
+            "invalid": "Invalid email format"
+        },
+        "subject": {
+            "label": "Subject",
+            "placeholder": "What do you want to talk about?",
+            "required": "Subject is required"
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Tell me about your project, your ideas or simply what you want to talk about...",
+            "required": "Message is required",
+            "minLength": "Message must be at least 10 characters long"
+        },
+        "submit": "Send message",
+        "submitting": "Sending...",
+        "success": "Message sent successfully! I'll get back to you as soon as possible.",
+        "error": "Error sending message. Please try again later."
+    },
+    "info": {
+        "title": "Contact information",
+        "email": {
+            "title": "Email",
+            "value": "me@pcarbone.it"
+        },
+        "linkedin": {
+            "title": "LinkedIn",
+            "value": "linkedin.com/in/pasquale-carmine-carbone"
+        },
+        "github": {
+            "title": "GitHub",
+            "value": "github.com/KiraPC"
+        },
+        "location": {
+            "title": "Location",
+            "value": "Italy"
+        }
+    },
+    "availability": {
+        "title": "Availability",
+        "consulting": {
+            "type": "Consulting",
+            "description": "Available for technical and architectural consultations"
+        },
+        "projects": {
+            "type": "Projects",
+            "description": "Interested in innovative and challenging projects"
+        },
+        "collaborations": {
+            "type": "Collaborations",
+            "description": "Open to collaborations and tech partnerships"
+        },
+        "mentoring": {
+            "type": "Mentoring",
+            "description": "Available for mentoring and training"
+        },
+        "responseTime": "I usually respond within 24 hours. For urgent projects, I'll be happy to arrange a quick call."
+    },
+    "quickActions": {
+        "title": "Quick actions",
+        "downloadCV": "Download my Resume",
+        "linkedin": "Connect on LinkedIn"
+    }
+}
