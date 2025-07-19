@@ -25,7 +25,7 @@
 							observer.disconnect();
 						}
 					},
-					{ threshold: 0.1 }
+					{ threshold: 0.01 }
 				);
 				
 				observer.observe(ref);

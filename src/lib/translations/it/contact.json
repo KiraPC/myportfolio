@@ -1,9 +1,9 @@
 {
     "title": "Contatti",
-    "metaDescription": "Contatta Pasquale Carmine Carbone per progetti, consulenze o collaborazioni. Full Stack Software Engineer specializzato in architetture cloud e microservizi.",
+    "metaDescription": "Contatta Pasquale Carmine Carbone per networking, opportunità professionali e discussioni tecniche. Full Stack Software Engineer specializzato in architetture cloud e microservizi.",
     "header": {
-        "title": "Parliamo insieme",
-        "description": "Hai un progetto interessante? Un'idea innovativa? O semplicemente vuoi fare due chiacchiere di tecnologia? Sono sempre disponibile per nuove opportunità e collaborazioni."
+        "title": "Connettiamo e condividiamo",
+        "description": "Sei un recruiter in cerca di talenti tech? Un professionista che vuole discutere di tecnologie innovative? O semplicemente desideri fare networking nel mondo dello sviluppo software? Sono sempre interessato a confrontarmi con altri professionisti del settore e a esplorare nuove opportunità di crescita."
     },
     "form": {
         "title": "Invia un messaggio",
@@ -25,7 +25,7 @@
         },
         "message": {
             "label": "Messaggio",
-            "placeholder": "Descrivimi il tuo progetto, le tue idee o semplicemente quello di cui vuoi parlare...",
+            "placeholder": "Condividi le tue esperienze, discutiamo di tecnologie, esploriamo opportunità professionali o semplicemente facciamo conoscenza...",
             "required": "Il messaggio è obbligatorio",
             "minLength": "Il messaggio deve essere di almeno 10 caratteri"
         },

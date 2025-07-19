@@ -12,8 +12,33 @@
 			isScrolled = window.scrollY > 50;
 		};
 		
+		const handleClickOutside = (event: Event) => {
+			const target = event.target as Element;
+			if (isMenuOpen && !target.closest('.mobile-sidebar') && !target.closest('.menu-toggle')) {
+				isMenuOpen = false;
+			}
+		};
+		
+		const handleBodyScroll = () => {
+			if (isMenuOpen) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = '';
+			}
+		};
+		
+		$effect(() => {
+			handleBodyScroll();
+		});
+		
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		document.addEventListener('click', handleClickOutside);
+		
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			document.removeEventListener('click', handleClickOutside);
+			document.body.style.overflow = '';
+		};
 	});
 	
 	const navigationItems = [
@@ -34,11 +59,11 @@
 	}
 </script>
 
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 {isScrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 {isMenuOpen ? 'bg-white dark:bg-gray-900 z-40' : (isScrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent')}">
 	<nav class="container mx-auto px-6 py-4">
 		<div class="flex items-center justify-between">
 			<!-- Logo/Nome -->
-			<a href="/" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+			<a href="/" class="text-lg md:text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
 				{$t('common.name')}
 			</a>
 			
@@ -73,8 +98,11 @@
 				<ThemeToggle />
 				
 				<button 
-					class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-					onclick={toggleMenu}
+					class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors menu-toggle p-2 -m-2"
+					onclick={(e) => {
+						e.stopPropagation();
+						toggleMenu();
+					}}
 					aria-label="Toggle menu"
 				>
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,28 +115,66 @@
 				</button>
 			</div>
 		</div>
-		
-		<!-- Mobile Navigation -->
-		{#if isMenuOpen}
-			<div class="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4 bg-white dark:bg-gray-900">
-				{#each navigationItems as item}
-					<a 
-						href={item.href} 
-						class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium {$page.url.pathname === item.href ? 'text-blue-600 dark:text-blue-400' : ''}"
-						onclick={closeMenu}
-					>
-						{$t(item.labelKey)}
-					</a>
-				{/each}
-				<a 
-					href="/cv.pdf" 
-					target="_blank"
-					class="block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium text-center"
-					onclick={closeMenu}
-				>
-					{$t('common.resume')}
-				</a>
-			</div>
-		{/if}
 	</nav>
 </header>
+
+<!-- Mobile Navigation Sidebar (fuori dall'header) -->
+<!-- Overlay -->
+{#if isMenuOpen}
+	<div 
+		class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[55] md:hidden transition-opacity duration-300"
+		role="button"
+		tabindex="0"
+		onclick={closeMenu}
+		onkeydown={(e) => e.key === 'Escape' && closeMenu()}
+		aria-label="Close menu"
+	></div>
+{/if}
+
+<!-- Sidebar -->
+<div class="fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-900 shadow-2xl z-[60] md:hidden transform transition-transform duration-300 ease-out mobile-sidebar border-l border-gray-200 dark:border-gray-700 {isMenuOpen ? 'translate-x-0' : 'translate-x-full'}">
+	<!-- Sidebar Header -->
+	<div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+		<h2 class="text-xl font-bold text-gray-900 dark:text-white">Menu</h2>
+		<button 
+			class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+			onclick={closeMenu}
+			aria-label="Close menu"
+		>
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+	</div>
+	
+	<!-- Navigation Links -->
+	<div class="px-6 py-4 flex flex-col space-y-4">
+		{#each navigationItems as item}
+			<a 
+				href={item.href} 
+				class="flex items-center py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium border-b border-gray-100 dark:border-gray-800 {$page.url.pathname === item.href ? 'text-blue-600 dark:text-blue-400' : ''}"
+				onclick={closeMenu}
+			>
+				<span class="text-lg">{$t(item.labelKey)}</span>
+				{#if $page.url.pathname === item.href}
+					<svg class="w-5 h-5 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+					</svg>
+				{/if}
+			</a>
+		{/each}
+		
+		<!-- CV Download Button -->
+		<a 
+			href="/cv.pdf" 
+			target="_blank"
+			class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium text-center flex items-center justify-center space-x-2"
+			onclick={closeMenu}
+		>
+			<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+			</svg>
+			<span>{$t('common.resume')}</span>
+		</a>
+	</div>
+</div>
