@@ -31,8 +31,9 @@
         },
         "submit": "Send message",
         "submitting": "Sending...",
-        "success": "Message sent successfully! I'll get back to you as soon as possible.",
-        "error": "Error sending message. Please try again later."
+        "successMessage": "Message sent successfully! I'll get back to you as soon as possible.",
+        "errorMessage": "Error sending message. Please try again later.",
+        "generalError": "An error occurred while sending. Please try again later."
     },
     "info": {
         "title": "Contact information",
@@ -76,6 +77,6 @@
     "quickActions": {
         "title": "Quick actions",
         "downloadCV": "Download my Resume",
-        "linkedin": "Connect on LinkedIn"
+        "connectLinkedIn": "Connect on LinkedIn"
     }
 }

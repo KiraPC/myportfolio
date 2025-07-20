@@ -202,7 +202,6 @@
 										{#each category.skills as skill}
 											<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r {getSkillColor(skill.level)} text-white">
 												{skill.name}
-												<span class="ml-1 text-xs opacity-80">{skill.level}%</span>
 											</span>
 										{/each}
 									</div>
@@ -211,8 +210,8 @@
 						</div>
 						
 						<!-- Skills Grid - Expanded view -->
-						<div class="overflow-hidden transition-all duration-500 ease-in-out {expandedCategories[categoryIndex] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}">
-							<div class="p-6 transition-all duration-300 ease-in-out">
+						<div class="overflow-hidden transition-all duration-500 ease-in-out {expandedCategories[categoryIndex] ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}">
+							<div class="p-6 pb-12 transition-all duration-300 ease-in-out">
 								<div class="space-y-6">
 									{#each category.skills as skill, skillIndex}
 										<div 
@@ -242,7 +241,6 @@
 											</div>
 											<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
 												<span>{$t('skills.levelLabels.beginner')}</span>
-												<span>{skill.level}%</span>
 												<span>{$t('skills.levelLabels.expert')}</span>
 											</div>
 										</div>

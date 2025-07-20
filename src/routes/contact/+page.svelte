@@ -1,28 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { enhance } from '$app/forms';
 	import { t } from '$lib/translations';
 	import { analytics } from '$lib/analytics';
-	import type { ContactInfo, Availability } from './+page.server.js';
+	import type { PageData, ActionData } from './$types.js';
 	
-	type Props = {
-		data: {
-			contactInfo: ContactInfo[];
-			availability: Availability[];
-		};
-	};
-	
-	let { data }: Props = $props();
-	
-	let formData = $state({
-		name: '',
-		email: '',
-		subject: '',
-		message: ''
-	});
+	let { data, form }: { data: PageData; form: ActionData } = $props();
 	
 	let isSubmitting = $state(false);
-	let submitStatus = $state<'idle' | 'success' | 'error'>('idle');
-	let errors = $state<Record<string, string>>({});
+	let formErrors = $state<Record<string, string> | null>(null);
+	let formSuccess = $state(false);
 
 	// Animation variables
 	let contactFormRef: HTMLElement;
@@ -44,7 +31,7 @@
 
 	onMount(() => {
 		const observers: IntersectionObserver[] = [];
-		
+
 		if (contactFormRef) {
 			const observer = new IntersectionObserver(
 				([entry]) => {
@@ -94,79 +81,6 @@
 			observers.forEach(observer => observer.disconnect());
 		};
 	});
-
-	function validateForm() {
-		const newErrors: Record<string, string> = {};
-		
-		if (!formData.name.trim()) {
-			newErrors.name = $t('contact.form.name.required');
-		}
-		
-		if (!formData.email.trim()) {
-			newErrors.email = $t('contact.form.email.required');
-		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-			newErrors.email = $t('contact.form.email.invalid');
-		}
-		
-		if (!formData.subject.trim()) {
-			newErrors.subject = $t('contact.form.subject.required');
-		}
-		
-		if (!formData.message.trim()) {
-			newErrors.message = $t('contact.form.message.required');
-		} else if (formData.message.trim().length < 10) {
-			newErrors.message = $t('contact.form.message.minLength');
-		}
-		
-		errors = newErrors;
-		return Object.keys(newErrors).length === 0;
-	}
-	
-	async function handleSubmit(event: Event) {
-		event.preventDefault();
-		
-		if (!validateForm()) {
-			return;
-		}
-		
-		isSubmitting = true;
-		
-		try {
-			// Track form submission
-			analytics.contactForm('form');
-			
-			await new Promise(resolve => setTimeout(resolve, 2000));
-			
-			formData = {
-				name: '',
-				email: '',
-				subject: '',
-				message: ''
-			};
-			
-			submitStatus = 'success';
-			
-			setTimeout(() => {
-				submitStatus = 'idle';
-			}, 5000);
-			
-		} catch (error) {
-			submitStatus = 'error';
-			setTimeout(() => {
-				submitStatus = 'idle';
-			}, 5000);
-		} finally {
-			isSubmitting = false;
-		}
-	}
-	
-	function clearError(field: string) {
-		if (errors[field]) {
-			const newErrors = { ...errors };
-			delete newErrors[field];
-			errors = newErrors;
-		}
-	}
 </script>
 
 <svelte:head>
@@ -195,106 +109,124 @@
 				>
 					<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{$t('contact.form.title')}</h2>
 					
-					{#if submitStatus === 'success'}
+					{#if formSuccess}
 						<div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-6">
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 dark:text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
 								</svg>
-								<p class="text-green-800 dark:text-green-300 font-medium">{$t('contact.form.success')}</p>
+								<span class="text-green-700 dark:text-green-300 font-medium">{$t('contact.form.successMessage')}</span>
 							</div>
 						</div>
-					{/if}
-					
-					{#if submitStatus === 'error'}
-						<div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+					{:else if formErrors && Object.keys(formErrors).length > 0}
+						<div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-6">
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+								<svg class="w-5 h-5 text-red-500 dark:text-red-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
 								</svg>
-								<p class="text-red-800 font-medium">{$t('contact.form.error')}</p>
+								<span class="text-red-700 dark:text-red-300 font-medium">
+									{#if formErrors.general}
+										{$t(formErrors.general)}
+									{:else}
+										{$t('contact.form.errorMessage')}
+									{/if}
+								</span>
 							</div>
 						</div>
 					{/if}
 					
-					<form onsubmit={handleSubmit} class="space-y-6">
-						<!-- Nome -->
-						<div>
+					<form 
+						method="POST" 
+						action="?/contact"
+						use:enhance={() => {
+							isSubmitting = true;
+							formErrors = null;
+							formSuccess = false;
+							analytics.contactForm('form');
+							
+							return async ({ result }) => {
+								isSubmitting = false;
+								
+								if (result.type === 'failure') {
+									formErrors = (result.data?.errors as Record<string, string>) || null;
+								} else {
+									formSuccess = true;
+								}
+							};
+						}}
+					>
+						
+						<div class="mb-6">
 							<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 								{$t('contact.form.name.label')} *
 							</label>
 							<input
 								type="text"
 								id="name"
-								bind:value={formData.name}
-								oninput={() => clearError('name')}
-								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {errors.name ? 'border-red-500' : ''}"
+								name="name"
+								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {formErrors?.name ? 'border-red-500' : ''}"
 								placeholder={$t('contact.form.name.placeholder')}
 								required
 							/>
-							{#if errors.name}
-								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{errors.name}</p>
+							{#if formErrors?.name}
+								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{$t(formErrors.name)}</p>
 							{/if}
 						</div>
 						
-						<!-- Email -->
-						<div>
+						
+						<div class="mb-6">
 							<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 								{$t('contact.form.email.label')} *
 							</label>
 							<input
 								type="email"
 								id="email"
-								bind:value={formData.email}
-								oninput={() => clearError('email')}
-								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {errors.email ? 'border-red-500' : ''}"
+								name="email"
+								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {formErrors?.email ? 'border-red-500' : ''}"
 								placeholder={$t('contact.form.email.placeholder')}
 								required
 							/>
-							{#if errors.email}
-								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{errors.email}</p>
+							{#if formErrors?.email}
+								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{$t(formErrors.email)}</p>
 							{/if}
 						</div>
 						
-						<!-- Oggetto -->
-						<div>
+						
+						<div class="mb-6">
 							<label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 								{$t('contact.form.subject.label')} *
 							</label>
 							<input
 								type="text"
 								id="subject"
-								bind:value={formData.subject}
-								oninput={() => clearError('subject')}
-								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {errors.subject ? 'border-red-500' : ''}"
+								name="subject"
+								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white {formErrors?.subject ? 'border-red-500' : ''}"
 								placeholder={$t('contact.form.subject.placeholder')}
 								required
 							/>
-							{#if errors.subject}
-								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{errors.subject}</p>
+							{#if formErrors?.subject}
+								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{$t(formErrors.subject)}</p>
 							{/if}
 						</div>
-						
-						<!-- Messaggio -->
-						<div>
+					
+						<div class="mb-6">
 							<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 								{$t('contact.form.message.label')} *
 							</label>
 							<textarea
 								id="message"
-								bind:value={formData.message}
-								oninput={() => clearError('message')}
+								name="message"
 								rows="6"
-								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white {errors.message ? 'border-red-500' : ''}"
+								class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white {formErrors?.message ? 'border-red-500' : ''}"
 								placeholder={$t('contact.form.message.placeholder')}
 								required
 							></textarea>
-							{#if errors.message}
-								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{errors.message}</p>
+							{#if formErrors?.message}
+								<p class="text-red-600 dark:text-red-400 text-sm mt-1">{$t(formErrors.message)}</p>
 							{/if}
 						</div>
 						
-						<!-- Submit Button -->
+						
 						<button
 							type="submit"
 							disabled={isSubmitting}
@@ -313,9 +245,8 @@
 					</form>
 				</div>
 				
-				<!-- Contact Info & Availability -->
+				<!-- Contact Info -->
 				<div class="space-y-8 order-1 lg:order-2">
-					<!-- Contact Information -->
 					<div 
 						bind:this={contactInfoRef}
 						class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700 transition-all duration-700 ease-out transform {visibleContactInfo 
@@ -334,7 +265,7 @@
 												href={contact.action} 
 												target="_blank" 
 												rel="noopener noreferrer"
-												onclick={() => trackContactLink(contact.action)}
+												onclick={() => contact.action && trackContactLink(contact.action)}
 												class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-sm"
 											>
 												{$t(contact.value)}
@@ -376,7 +307,7 @@
 							
 							<a 
 								href="https://linkedin.com/in/pasquale-carmine-carbone" 
-								target="_blank" 
+								target="_blank"
 								rel="noopener noreferrer"
 								onclick={() => analytics.externalLink('linkedin', 'quick_actions')}
 								class="flex items-center justify-between w-full p-4 bg-blue-50 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-gray-700 rounded-lg transition-colors group"
@@ -385,7 +316,7 @@
 									<svg class="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
 										<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
 									</svg>
-									<span class="font-medium text-gray-900 dark:text-white">{$t('contact.quickActions.linkedin')}</span>
+									<span class="font-medium text-gray-900 dark:text-white">{$t('contact.quickActions.connectLinkedIn')}</span>
 								</div>
 								<svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -396,6 +327,5 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </div>

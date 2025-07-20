@@ -31,8 +31,9 @@
         },
         "submit": "Invia messaggio",
         "submitting": "Invio in corso...",
-        "success": "Messaggio inviato con successo! Ti risponderò al più presto.",
-        "error": "Errore nell'invio del messaggio. Riprova più tardi."
+        "successMessage": "Messaggio inviato con successo! Ti risponderò al più presto.",
+        "errorMessage": "Errore nell'invio del messaggio. Riprova più tardi.",
+        "generalError": "Si è verificato un errore durante l'invio. Riprova più tardi."
     },
     "info": {
         "title": "Informazioni di contatto",
@@ -76,6 +77,6 @@
     "quickActions": {
         "title": "Azioni veloci",
         "downloadCV": "Scarica il mio Curriculum",
-        "linkedin": "Collegati su LinkedIn"
+        "connectLinkedIn": "Collegati su LinkedIn"
     }
 }

@@ -9,6 +9,75 @@
 			"problemMatcher": [
 				"$tsc"
 			]
+		},
+		{
+			"label": "Debug: Start SvelteKit Dev Server",
+			"type": "shell",
+			"command": "npm",
+			"args": ["run", "dev"],
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "new"
+			},
+			"isBackground": true,
+			"problemMatcher": {
+				"pattern": {
+					"regexp": "."
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^.*VITE.*",
+					"endsPattern": "^.*ready in.*"
+				}
+			},
+			"options": {
+				"env": {
+					"NODE_OPTIONS": "--inspect=9229",
+					"NODE_ENV": "development"
+				}
+			}
+		},
+		{
+			"label": "Debug: Test Contact Form",
+			"type": "shell",
+			"command": "curl",
+			"args": [
+				"-X", "POST",
+				"-H", "Content-Type: application/x-www-form-urlencoded",
+				"-d", "name=Debug%20Test&email=test@example.com&subject=Debug%20Test&message=Test%20message%20for%20debugging",
+				"http://localhost:5173/contact"
+			],
+			"group": "test",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Debug: Check Email Configuration",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"console.log('SMTP Config:', { host: process.env.SMTP_HOST, port: process.env.SMTP_PORT, user: process.env.SMTP_USER ? 'SET' : 'NOT SET', pass: process.env.SMTP_PASS ? 'SET' : 'NOT SET' })"
+			],
+			"group": "test",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared"
+			},
+			"options": {
+				"env": {
+					"NODE_OPTIONS": "--require dotenv/config"
+				}
+			}
 		}
 	]
 }

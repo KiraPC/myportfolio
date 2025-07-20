@@ -86,33 +86,6 @@ export const load = async () => {
                 'interests.innovation.details.1',
                 'interests.innovation.details.2',
                 'interests.innovation.details.3'
-            ],
-            projects: [
-                {
-                    name: 'interests.innovation.projects.aiFaq.name',
-                    description: 'interests.innovation.projects.aiFaq.description',
-                    technologies: ['MongoDB Atlas', 'Vector Search', 'FireworksAI', 'Python', 'FastAPI'],
-                    link: '',
-                    impact: 'interests.innovation.projects.aiFaq.impact'
-                },
-                {
-                    name: 'interests.innovation.projects.smartTeacher.name',
-                    description: 'interests.innovation.projects.smartTeacher.description',
-                    technologies: ['Google Assistant', 'Google Home', 'Dialogflow', 'Node.js'],
-                    link: '',
-                    impact: 'interests.innovation.projects.smartTeacher.impact'
-                }
-            ]
-        },
-        {
-            title: 'interests.travel.title',
-            description: 'interests.travel.description',
-            icon: '✈️',
-            details: [
-                'interests.travel.details.0',
-                'interests.travel.details.1',
-                'interests.travel.details.2',
-                'interests.travel.details.3'
             ]
         },
         {
@@ -123,7 +96,6 @@ export const load = async () => {
                 'interests.continuousLearning.details.0',
                 'interests.continuousLearning.details.1',
                 'interests.continuousLearning.details.2',
-                'interests.continuousLearning.details.3'
             ]
         },
         {
@@ -135,6 +107,17 @@ export const load = async () => {
                 'interests.automation.details.1',
                 'interests.automation.details.2',
                 'interests.automation.details.3'
+            ]
+        },
+        {
+            title: 'interests.travel.title',
+            description: 'interests.travel.description',
+            icon: '✈️',
+            details: [
+                'interests.travel.details.0',
+                'interests.travel.details.1',
+                'interests.travel.details.2',
+                'interests.travel.details.3'
             ]
         }
     ];

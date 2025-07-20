@@ -1,0 +1,95 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug SvelteKit Dev Server",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": [
+				"run",
+				"dev"
+			],
+			"env": {
+				"NODE_OPTIONS": "--inspect",
+				"NODE_ENV": "development"
+			},
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"skipFiles": [
+				"<node_internals>/**",
+				"**/node_modules/**"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			]
+		},
+		{
+			"name": "Debug SvelteKit Build",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": [
+				"run",
+				"build"
+			],
+			"env": {
+				"NODE_OPTIONS": "--inspect",
+				"NODE_ENV": "production"
+			},
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"skipFiles": [
+				"<node_internals>/**",
+				"**/node_modules/**"
+			]
+		},
+		{
+			"name": "Debug Contact Form Server Action",
+			"type": "node",
+			"request": "attach",
+			"port": 9229,
+			"localRoot": "${workspaceFolder}",
+			"remoteRoot": "${workspaceFolder}",
+			"skipFiles": [
+				"<node_internals>/**",
+				"**/node_modules/**"
+			],
+			"restart": true,
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/src/**",
+				"!**/node_modules/**"
+			]
+		},
+		{
+			"name": "Debug Server-Side Code Only",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"program": "${workspaceFolder}/node_modules/@sveltejs/kit/src/exports/vite/dev/index.js",
+			"args": [
+				"--mode",
+				"development"
+			],
+			"env": {
+				"NODE_ENV": "development",
+				"VITE_USER_NODE_ENV": "development"
+			},
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"skipFiles": [
+				"<node_internals>/**",
+				"**/node_modules/**",
+				"**/.svelte-kit/**"
+			],
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/src/**",
+				"!**/node_modules/**"
+			],
+			"sourceMaps": true
+		}
+	]
+}

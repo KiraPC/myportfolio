@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"svelte.svelte-vscode",
+		"bradlc.vscode-tailwindcss",
+		"vscode.typescript-language-features",
+		"ms-vscode.js-debug",
+		"ms-vscode.vscode-js-profile-flame",
+		"lokalise.i18n-ally"
+	]
+}

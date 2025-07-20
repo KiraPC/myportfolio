@@ -59,25 +59,25 @@ export const load = async () => {
 
     const continuousLearning: ContinuousLearning[] = [
         {
+            area: 'education.continuousLearning.modernFrameworks.area',
+            description: 'education.continuousLearning.modernFrameworks.description',
+            technologies: ['SvelteKit', 'FastAPI', 'SpringBoot', 'Fastify']
+        },
+        {
             area: 'education.continuousLearning.cloudTechnologies.area',
             description: 'education.continuousLearning.cloudTechnologies.description',
             technologies: ['AWS Lambda', 'Azure Functions', 'Kubernetes', 'Docker']
         },
         {
-            area: 'education.continuousLearning.artificialIntelligence.area',
-            description: 'education.continuousLearning.artificialIntelligence.description',
-            technologies: ['OpenAI GPT', 'MongoDB Vector Search', 'Langchain', 'Embeddings']
-        },
-        {
-            area: 'education.continuousLearning.modernFrameworks.area',
-            description: 'education.continuousLearning.modernFrameworks.description',
-            technologies: ['SvelteKit', 'FastAPI', 'Next.js', 'Astro']
-        },
-        {
             area: 'education.continuousLearning.devopsAutomation.area',
             description: 'education.continuousLearning.devopsAutomation.description',
-            technologies: ['GitHub Actions', 'Jenkins', 'Terraform', 'Ansible']
-        }
+            technologies: ['CI/CD', 'GitHub Actions', 'Jenkins']
+        },
+        {
+            area: 'education.continuousLearning.artificialIntelligence.area',
+            description: 'education.continuousLearning.artificialIntelligence.description',
+            technologies: ['OpenAI GPT', 'MongoDB Vector Search', 'Embeddings', 'FireworksAI']
+        },
     ];
 
     return {
