@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import UmamiAnalytics from '$lib/components/UmamiAnalytics.svelte';
 	import { theme } from '$lib/stores/theme';
 	import { languageStore } from '$lib/stores/language';
 	import { locale } from '$lib/translations';
@@ -40,4 +41,5 @@
 		{@render children()}
 	</main>
 	<Footer />
+	<UmamiAnalytics />
 </div>
