@@ -1,6 +1,6 @@
 {
     "title": "Pasquale Carmine Carbone - Full Stack Software Engineer",
-    "metaDescription": "Portfolio of Pasquale Carmine Carbone, Full Stack Software Engineer specialized in cloud architectures, microservices and automation. Experience with AWS, SvelteKit, Python, Java and Go.",
+    "metaDescription": "Portfolio of Pasquale Carmine Carbone, Full Stack Software Engineer specialized in cloud architectures, microservices and automation.",
     "hero": {
         "greeting": "Hi, I'm",
         "name": "Pasquale",
@@ -14,7 +14,7 @@
         "description": "A mix of modern languages, frameworks and cloud technologies to create robust and scalable solutions"
     },
     "highlights": {
-        "title": "My specializations",
+        "title": "Core Skills",
         "description": "Areas of expertise that allow me to tackle complex challenges and create value for projects",
         "items": {
             "cloud": {

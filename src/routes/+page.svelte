@@ -67,15 +67,16 @@
 	});
 	
 	const skills = [
+		'Git',
 		'JavaScript/TypeScript',
+		'Node.js',
 		'Python',
 		'Java',
-		'Go',
 		'SvelteKit',
-		'Node.js',
+		'Go',
 		'AWS',
+		'Docker',
 		'Kubernetes',
-		'Docker'
 	];
 	
 	const highlights = [

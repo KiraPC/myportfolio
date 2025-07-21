@@ -23,26 +23,26 @@ export interface ExpertiseArea {
 export const load = async () => {
     const expertiseAreas: ExpertiseArea[] = [
         {
-            title: 'Full-Stack Development',
-            description: 'Sviluppo end-to-end di applicazioni web moderne con focus su performance e UX.',
+            title: 'skills.expertise.fullStack.title',
+            description: 'skills.expertise.fullStack.description',
             icon: '🎯',
             technologies: ['SvelteKit', 'FastAPI', 'PostgreSQL', 'TailwindCSS', 'TypeScript']
         },
         {
-            title: 'Architetture Cloud-Native',
-            description: 'Progettazione di sistemi distribuiti scalabili su AWS con approccio serverless e microservizi.',
+            title: 'skills.expertise.cloudNative.title',
+            description: 'skills.expertise.cloudNative.description',
             icon: '🏗️',
             technologies: ['AWS Lambda', 'API Gateway', 'ECS', 'SQS/SNS', 'CloudFormation']
         },
         {
-            title: 'Automazione & DevOps',
-            description: 'CI/CD, Infrastructure as Code e pratiche DevOps per rilasci affidabili e veloci.',
+            title: 'skills.expertise.devops.title',
+            description: 'skills.expertise.devops.description',
             icon: '⚙️',
             technologies: ['Jenkins', 'Kubernetes', 'Docker', 'Terraform', 'GitHub Actions']
         },
         {
-            title: 'Data Engineering',
-            description: 'Pipeline ETL, data lakes e sistemi di analisi real-time per grandi volumi di dati.',
+            title: 'skills.expertise.dataEngineering.title',
+            description: 'skills.expertise.dataEngineering.description',
             icon: '📊',
             technologies: ['Apache Spark', 'Kafka', 'Delta Lake', 'Databricks', 'OpenSearch']
         }

@@ -131,7 +131,7 @@
 
 		<!-- Expertise Areas -->
 		<div class="mb-20">
-			<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Aree di Competenza</h2>
+			<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">{$t('skills.expertise.title')}</h2>
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 				{#each data.expertiseAreas as area, index}
 					<div 
@@ -140,8 +140,8 @@
 						style="transition-duration: 800ms; animation-delay: {index * 100}ms"
 					>
 						<div class="text-4xl mb-4">{area.icon}</div>
-						<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">{area.title}</h3>
-						<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">{area.description}</p>
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">{$t(area.title)}</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">{$t(area.description)}</p>
 						<div class="space-y-1">
 							{#each area.technologies as tech}
 								<span class="inline-block bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium mr-1">
