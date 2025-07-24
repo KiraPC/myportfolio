@@ -89,6 +89,12 @@
                 "express": {
                     "description": "API Gateway, custom middleware, modular architectures"
                 },
+                "fastify": {
+                    "description": "Lightning-fast Node.js web framework, optimized performance"
+                },
+                "gin": {
+                    "description": "Minimalist web framework for Go, efficient routing"
+                },
                 "react": {
                     "description": "Reusable components, state management, advanced hooks"
                 }
@@ -122,6 +128,9 @@
                 "mongodb": {
                     "description": "Aggregation pipelines, replica sets, vector search"
                 },
+                "dynamodb": {
+                    "description": "AWS serverless NoSQL database, advanced data modeling"
+                },
                 "postgresql": {
                     "description": "Query optimization, stored procedures, partitioning"
                 },
@@ -142,6 +151,15 @@
             "skills": {
                 "git": {
                     "description": "Advanced version control, branching strategies, code review"
+                },
+                "jenkins": {
+                    "description": "CI/CD server, pipeline automation, continuous integration"
+                },
+                "spark": {
+                    "description": "Big data processing, PySpark, distributed computing"
+                },
+                "databricks": {
+                    "description": "Data science platform, unified Spark, machine learning"
                 },
                 "agile": {
                     "description": "SAFe certified, iterative planning, retrospectives"

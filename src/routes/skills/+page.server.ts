@@ -57,7 +57,7 @@ export const load = async () => {
                 { name: 'JavaScript/TypeScript', level: 95, category: 'frontend', years: 7, description: 'skills.categories.programming.skills.javascript.description' },
                 { name: 'Python', level: 90, category: 'backend', years: 5, description: 'skills.categories.programming.skills.python.description' },
                 { name: 'Java', level: 85, category: 'backend', years: 6, description: 'skills.categories.programming.skills.java.description' },
-                { name: 'Go', level: 80, category: 'backend', years: 3, description: 'skills.categories.programming.skills.go.description' },
+                { name: 'Go', level: 70, category: 'backend', years: 3, description: 'skills.categories.programming.skills.go.description' },
             ]
         },
         {
@@ -69,7 +69,9 @@ export const load = async () => {
                 { name: 'FastAPI', level: 85, category: 'backend', years: 3, description: 'skills.categories.frameworks.skills.fastapi.description' },
                 { name: 'Spring Boot', level: 85, category: 'backend', years: 4, description: 'skills.categories.frameworks.skills.springboot.description' },
                 { name: 'Express.js', level: 80, category: 'backend', years: 5, description: 'skills.categories.frameworks.skills.express.description' },
-                { name: 'React', level: 75, category: 'frontend', years: 3, description: 'skills.categories.frameworks.skills.react.description' }
+                { name: 'Fastify', level: 60, category: 'backend', years: 2, description: 'skills.categories.frameworks.skills.fastify.description' },
+                { name: 'Gin', level: 70, category: 'backend', years: 3, description: 'skills.categories.frameworks.skills.gin.description' },
+                { name: 'React', level: 50, category: 'frontend', years: 3, description: 'skills.categories.frameworks.skills.react.description' }
             ]
         },
         {
@@ -90,10 +92,10 @@ export const load = async () => {
             description: 'skills.categories.database.description',
             skills: [
                 { name: 'MongoDB', level: 85, category: 'database', years: 4, description: 'skills.categories.database.skills.mongodb.description' },
-                { name: 'PostgreSQL', level: 80, category: 'database', years: 4, description: 'skills.categories.database.skills.postgresql.description' },
+                { name: 'DynamoDB', level: 85, category: 'database', years: 4, description: 'skills.categories.database.skills.dynamodb.description' },
                 { name: 'AWS OpenSearch', level: 85, category: 'search', years: 3, description: 'skills.categories.database.skills.opensearch.description' },
+                { name: 'PostgreSQL', level: 80, category: 'database', years: 4, description: 'skills.categories.database.skills.postgresql.description' },
                 { name: 'Apache Kafka', level: 75, category: 'streaming', years: 2, description: 'skills.categories.database.skills.kafka.description' },
-                { name: 'Apache Spark', level: 70, category: 'bigdata', years: 2, description: 'skills.categories.database.skills.spark.description' }
             ]
         },
         {
@@ -101,8 +103,11 @@ export const load = async () => {
             icon: '🛠️',
             description: 'skills.categories.tools.description',
             skills: [
-                { name: 'Git/GitHub', level: 90, category: 'tools', years: 7, description: 'skills.categories.tools.skills.git.description' },
-                { name: 'Agile/Scrum', level: 85, category: 'methodology', years: 5, description: 'skills.categories.tools.skills.agile.description' },
+                { name: 'Git', level: 90, category: 'tools', years: 7, description: 'skills.categories.tools.skills.git.description' },
+                { name: 'Jenkins', level: 90, category: 'tools', years: 7, description: 'skills.categories.tools.skills.jenkins.description' },
+                { name: 'Apache Spark', level: 70, category: 'bigdata', years: 2, description: 'skills.categories.tools.skills.spark.description' },
+                { name: 'Databricks', level: 75, category: 'bigdata', years: 5, description: 'skills.categories.tools.skills.databricks.description' },
+                { name: 'Agile/Scrum', level: 75, category: 'methodology', years: 5, description: 'skills.categories.tools.skills.agile.description' },
                 { name: 'Test Automation', level: 80, category: 'testing', years: 4, description: 'skills.categories.tools.skills.testing.description' },
                 { name: 'API Design', level: 85, category: 'architecture', years: 5, description: 'skills.categories.tools.skills.api.description' },
                 { name: 'Monitoring', level: 75, category: 'observability', years: 3, description: 'skills.categories.tools.skills.monitoring.description' }
