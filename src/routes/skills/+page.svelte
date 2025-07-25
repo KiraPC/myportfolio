@@ -94,16 +94,24 @@
 		expandedCategories[index] = !expandedCategories[index];
 		
 		if (expandedCategories[index]) {
+			// Reset skills visibility when opening
+			if (!visibleSkills[index]) {
+				visibleSkills[index] = [];
+			}
+			
+			// Reset all skills to invisible first
+			for (let i = 0; i < data.skillCategories[index].skills.length; i++) {
+				visibleSkills[index][i] = false;
+			}
+			
+			// Wait for the container to expand, then animate skills
 			setTimeout(() => {
-				if (!visibleSkills[index]) {
-					visibleSkills[index] = [];
-				}
 				for (let i = 0; i < data.skillCategories[index].skills.length; i++) {
 					setTimeout(() => {
 						visibleSkills[index][i] = true;
 					}, i * 150);
 				}
-			}, 200);
+			}, 300);
 		}
 	}
 
@@ -210,14 +218,14 @@
 						</div>
 						
 						<!-- Skills Grid - Expanded view -->
-						<div class="overflow-hidden transition-all duration-500 ease-in-out {expandedCategories[categoryIndex] ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}">
-							<div class="p-6 pb-12 transition-all duration-300 ease-in-out">
-								<div class="space-y-6">
+						<div class="overflow-hidden transition-all duration-700 ease-in-out {expandedCategories[categoryIndex] ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}">
+							<div class="p-6 pb-8 transition-all duration-500 ease-in-out transform {expandedCategories[categoryIndex] ? 'translate-y-0' : '-translate-y-4'}">
+								<div class="space-y-6 pb-2">
 									{#each category.skills as skill, skillIndex}
 										<div 
 											bind:this={skillRefs[categoryIndex][skillIndex]}
-											class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all transform {visibleSkills[categoryIndex]?.[skillIndex] ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-8 opacity-0 scale-95'}"
-											style="transition-duration: 600ms; animation-delay: {skillIndex * 100}ms"
+											class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-700 ease-out transform {visibleSkills[categoryIndex]?.[skillIndex] ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-12 opacity-0 scale-95'}"
+											style="transition-delay: {skillIndex * 150}ms"
 										>
 											<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 												<div class="flex-1">
@@ -233,13 +241,13 @@
 											</div>
 											
 											<!-- Progress Bar -->
-											<div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-3 overflow-hidden">
+											<div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-3 overflow-hidden mb-2">
 												<div 
-													class="h-full bg-gradient-to-r {getSkillColor(skill.level)} transition-all duration-2000 ease-out rounded-full"
-													style="width: {visibleSkills[categoryIndex]?.[skillIndex] ? skill.level : 0}%"
+													class="h-full bg-gradient-to-r {getSkillColor(skill.level)} transition-all duration-2000 ease-out rounded-full transform"
+													style="width: {visibleSkills[categoryIndex]?.[skillIndex] ? skill.level : 0}%; transition-delay: {200}ms"
 												></div>
 											</div>
-											<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+											<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1 mb-1">
 												<span>{$t('skills.levelLabels.beginner')}</span>
 												<span>{$t('skills.levelLabels.expert')}</span>
 											</div>
