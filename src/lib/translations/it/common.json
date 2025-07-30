@@ -1,7 +1,15 @@
 {
     "name": "Pasquale Carmine Carbone",
     "jobTitle": "Full Stack Software Engineer",
-    "resume": "Curriculum",
+    "resume": {
+        "label": "Curriculum",
+        "download": "Scarica Curriculum",
+        "selectLanguage": "Seleziona Lingua",
+        "languages": {
+            "it": "Italiano",
+            "en": "Inglese"
+        }
+    },
     "navigation": {
         "home": "Home",
         "experiences": "Esperienze",

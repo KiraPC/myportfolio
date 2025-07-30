@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { t } from '$lib/translations';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import CVDownload from './CVDownload.svelte';
 	
 	let isMenuOpen = $state(false);
 	let isScrolled = $state(false);
@@ -83,13 +84,7 @@
 				<ThemeToggle />
 				
 				<!-- CV Download Button -->
-				<a 
-					href="/cv.pdf" 
-					target="_blank"
-					class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium"
-				>
-					{$t('common.resume')}
-				</a>
+				<CVDownload />
 			</div>
 			
 			<!-- Mobile Menu Button -->
@@ -165,16 +160,8 @@
 		{/each}
 		
 		<!-- CV Download Button -->
-		<a 
-			href="/cv.pdf" 
-			target="_blank"
-			class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-medium text-center flex items-center justify-center space-x-2"
-			onclick={closeMenu}
-		>
-			<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-			</svg>
-			<span>{$t('common.resume')}</span>
-		</a>
+		<div class="mt-6">
+			<CVDownload onAction={closeMenu} />
+		</div>
 	</div>
 </div>

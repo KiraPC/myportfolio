@@ -3,6 +3,7 @@
 	import { enhance } from '$app/forms';
 	import { t } from '$lib/translations';
 	import { analytics } from '$lib/analytics';
+	import CVDownload from '$lib/components/CVDownload.svelte';
 	import type { PageData, ActionData } from './$types.js';
 	
 	let { data, form }: { data: PageData; form: ActionData } = $props();
@@ -288,22 +289,9 @@
 					>
 						<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">{$t('contact.quickActions.title')}</h3>
 						<div class="space-y-3">
-							<a 
-								href="/cv.pdf" 
-								target="_blank"
-								onclick={() => analytics.downloadCV()}
-								class="flex items-center justify-between w-full p-4 bg-blue-50 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-gray-700 rounded-lg transition-colors group"
-							>
-								<div class="flex items-center">
-									<svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-									</svg>
-									<span class="font-medium text-gray-900 dark:text-white">{$t('contact.quickActions.downloadCV')}</span>
-								</div>
-								<svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-								</svg>
-							</a>
+							<div class="flex items-center justify-center w-full p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
+								<CVDownload />
+							</div>
 							
 							<a 
 								href="https://linkedin.com/in/pasquale-carmine-carbone" 
