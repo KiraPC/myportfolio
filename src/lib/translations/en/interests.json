@@ -20,10 +20,10 @@
                 "description": "FastAPI utility library that simplifies controller and routing management.",
                 "impact": "Simplifies FastAPI REST API development by reducing boilerplate code by 40%"
             },
-            "fastapiBoilerplate": {
-                "name": "fastapi-mvc-boilerplate",
-                "description": "FastAPI project template with pre-configured MVC architecture and best practices.",
-                "impact": "Accelerates FastAPI project startup with enterprise-ready structure"
+            "vitePluginSveltekitDecorators": {
+                "name": "vite-plugin-sveltekit-decorators",
+                "description": "Vite plugin that automatically decorates SvelteKit functions with decorators, enhancing code organization and readability.",
+                "impact": "Improves code organization in SvelteKit projects by automatically applying decorators to functions, reducing boilerplate and enhancing readability"
             }
         }
     },

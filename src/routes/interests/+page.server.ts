@@ -35,19 +35,25 @@ export const load = async () => {
             ],
             projects: [
                 {
+                    name: 'interests.openSource.projects.vitePluginSveltekitDecorators.name',
+                    description: 'interests.openSource.projects.vitePluginSveltekitDecorators.description',
+                    technologies: [
+                        'TypeScript',
+                        'Vite',
+                        'SvelteKit',
+                        'Node.js',
+                        'Vitest'
+                    ],
+                    link: 'https://github.com/KiraPC/vite-plugin-sveltekit-decorators',
+                    impact: 'interests.openSource.projects.vitePluginSveltekitDecorators.impact'
+                },
+                {
                     name: 'interests.openSource.projects.fastapiController.name',
                     description: 'interests.openSource.projects.fastapiController.description',
                     technologies: ['Python', 'FastAPI', 'Pydantic', 'Poetry'],
                     link: 'https://github.com/KiraPC/fastapi-router-controller',
                     impact: 'interests.openSource.projects.fastapiController.impact'
                 },
-                {
-                    name: 'interests.openSource.projects.fastapiBoilerplate.name',
-                    description: 'interests.openSource.projects.fastapiBoilerplate.description',
-                    technologies: ['Python', 'FastAPI', 'SQLAlchemy', 'Alembic', 'Docker'],
-                    link: 'https://github.com/KiraPC/fastapi-mvc-boilerplate',
-                    impact: 'interests.openSource.projects.fastapiBoilerplate.impact'
-                }
             ]
         },
         {
