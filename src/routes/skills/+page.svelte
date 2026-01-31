@@ -140,7 +140,7 @@
 		<!-- Expertise Areas -->
 		<div class="mb-20">
 			<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">{$t('skills.expertise.title')}</h2>
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 				{#each data.expertiseAreas as area, index}
 					<div 
 						bind:this={expertiseRefs[index]}

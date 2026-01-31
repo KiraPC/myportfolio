@@ -18,6 +18,22 @@ export interface Experience {
 export const load = async () => {
     const experiences: Experience[] = [
         {
+            company: 'NearForm',
+            role: 'experiences.nearform.role',
+            period: 'experiences.nearform.period',
+            description: 'experiences.nearform.description',
+            type: 'main',
+            icon: '/logos/nearform.png',
+            projects: [
+                {
+                    name: 'experiences.nearform.projects.aiAgent.name',
+                    description: 'experiences.nearform.projects.aiAgent.description',
+                    technologies: ['LLM', 'Python', 'Node.js', 'TypeScript', 'Mastra', 'Embedding', 'OpenSearch Vector', 'BMAD', 'SSD'],
+                    impact: 'experiences.nearform.projects.aiAgent.impact'
+                }
+            ]
+        },
+        {
             company: 'Poste Italiane',
             role: 'experiences.posteItaliane.role',
             period: 'experiences.posteItaliane.period',

@@ -23,6 +23,12 @@ export interface ExpertiseArea {
 export const load = async () => {
     const expertiseAreas: ExpertiseArea[] = [
         {
+            title: 'skills.expertise.aiEngineering.title',
+            description: 'skills.expertise.aiEngineering.description',
+            icon: '🤖',
+            technologies: ['Agent Coding', 'BMAD', 'SDD', 'Context Management', 'Prompt Engineering']
+        },
+        {
             title: 'skills.expertise.fullStack.title',
             description: 'skills.expertise.fullStack.description',
             icon: '🎯',
@@ -96,6 +102,18 @@ export const load = async () => {
                 { name: 'AWS OpenSearch', level: 85, category: 'search', years: 3, description: 'skills.categories.database.skills.opensearch.description' },
                 { name: 'PostgreSQL', level: 80, category: 'database', years: 4, description: 'skills.categories.database.skills.postgresql.description' },
                 { name: 'Apache Kafka', level: 75, category: 'streaming', years: 2, description: 'skills.categories.database.skills.kafka.description' },
+            ]
+        },
+        {
+            name: 'skills.categories.aiEngineering.name',
+            icon: '🤖',
+            description: 'skills.categories.aiEngineering.description',
+            skills: [
+                { name: 'Agent Coding', level: 80, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.agentCoding.description' },
+                { name: 'BMAD', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.bmad.description' },
+                { name: 'SDD', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.sdd.description' },
+                { name: 'Context Management', level: 80, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.contextManagement.description' },
+                { name: 'Prompt Engineering', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.promptEngineering.description' }
             ]
         },
         {

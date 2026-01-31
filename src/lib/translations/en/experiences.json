@@ -8,9 +8,21 @@
     "ctaTitle": "Interested in collaborating?",
     "ctaDescription": "I'm always open to new challenges and interesting projects",
     "ctaButton": "Contact me",
+    "nearform": {
+        "role": "Senior Software Engineer",
+        "period": "January 2026 - present",
+        "description": "Development of innovative software solutions for enterprise clients in a consultancy environment. Participation in challenging projects using cutting-edge technologies, with focus on scalable architectures, performance optimization and delivery of high-quality software.",
+        "projects": {
+            "aiAgent": {
+                "name": "AI Agent with RAG System",
+                "description": "Design and development of an intelligent AI agent leveraging Retrieval-Augmented Generation (RAG) architecture. The system combines large language models with efficient document retrieval to provide accurate, context-aware responses. Implementation of vector databases for semantic search, document chunking strategies, and prompt engineering techniques to optimize response quality and relevance.",
+                "impact": "Development of a scalable AI solution capable of processing and understanding large document corpora, providing accurate and contextually relevant responses to complex queries."
+            }
+        }
+    },
     "posteItaliane": {
         "role": "Full Stack Software Engineer",
-        "period": "2022 - present",
+        "period": "2022 - January 2026",
         "description": "Web application development, cross-functional team collaboration, implementation of scalable software solutions for one of Italy's main postal and financial services companies.",
         "projects": {
             "nuovaAreaComunicazioni": {

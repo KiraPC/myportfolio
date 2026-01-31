@@ -8,9 +8,21 @@
     "ctaTitle": "Interessato a collaborare?",
     "ctaDescription": "Sono sempre aperto a nuove sfide e progetti interessanti",
     "ctaButton": "Contattami",
+    "nearform": {
+        "role": "Senior Software Engineer",
+        "period": "Gennaio 2026 - presente",
+        "description": "Sviluppo di soluzioni software innovative per clienti enterprise in ambiente di consulenza. Partecipazione a progetti sfidanti utilizzando tecnologie all'avanguardia, con focus su architetture scalabili, ottimizzazione delle performance e delivery di software di alta qualità.",
+        "projects": {
+            "aiAgent": {
+                "name": "Agente AI con Sistema RAG",
+                "description": "Progettazione e sviluppo di un agente AI intelligente basato su architettura Retrieval-Augmented Generation (RAG). Il sistema combina large language models con recupero efficiente di documenti per fornire risposte accurate e contestualizzate. Implementazione di vector database per ricerca semantica, strategie di chunking dei documenti e tecniche di prompt engineering per ottimizzare qualità e rilevanza delle risposte.",
+                "impact": "Sviluppo di una soluzione AI scalabile capace di processare e comprendere grandi corpora documentali, fornendo risposte accurate e contestualmente rilevanti a query complesse."
+            }
+        }
+    },
     "posteItaliane": {
         "role": "Full Stack Software Engineer",
-        "period": "2022 - presente",
+        "period": "2022 - Dicembre 2025",
         "description": "Sviluppo di applicazioni web, collaborazione con team cross-funzionali, implementazione di soluzioni software scalabili per una delle principali aziende italiane nel settore postale e finanziario.",
         "projects": {
             "nuovaAreaComunicazioni": {

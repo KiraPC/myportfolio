@@ -51,6 +51,15 @@
                 "Infrastructure as Code with CDK and Terraform",
                 "Monitoring and logging with cloud-native tools"
             ]
+        },
+        "aiEngineering": {
+            "title": "AI Engineering",
+            "description": "Application of AI to accelerate and enhance software development",
+            "highlights": [
+                "AI-assisted coding with agent-based workflows",
+                "Structured methodologies like BMAD and SDD",
+                "Context management and prompt engineering"
+            ]
         }
     },
     "categories": {
@@ -142,6 +151,27 @@
                 },
                 "spark": {
                     "description": "PySpark, Delta Lake, data transformations on Databricks"
+                }
+            }
+        },
+        "aiEngineering": {
+            "name": "AI Engineering",
+            "description": "Methodologies and tools to leverage AI in software development",
+            "skills": {
+                "agentCoding": {
+                    "description": "AI-assisted development using coding agents, automated code generation and refactoring"
+                },
+                "bmad": {
+                    "description": "Breakthrough Method of Agile ai-driven Development, structured approach to AI-assisted software creation"
+                },
+                "sdd": {
+                    "description": "Specification-Driven Development, creating detailed specs for AI agents to implement"
+                },
+                "contextManagement": {
+                    "description": "Effective context window management, chunking strategies, maintaining coherent AI sessions"
+                },
+                "promptEngineering": {
+                    "description": "Crafting effective prompts, few-shot learning, chain-of-thought techniques for development tasks"
                 }
             }
         },
