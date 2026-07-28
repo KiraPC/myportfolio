@@ -20,6 +20,11 @@
                 "description": "AI agent framework. Contributions to the core: AWS credential provider chain for S3, abort signal propagation from parent to delegated sub-agents, provider metadata surfaced to output processors.",
                 "impact": "Fixes and features merged upstream while building production agents, so the team avoided maintaining local patches"
             },
+            "vercelAi": {
+                "name": "vercel/ai",
+                "description": "Investigated and documented a bug in the Amazon Bedrock provider: <reasoning> tags leaking into the text response during multi-turn tool use, with a proposed fix for unsigned reasoning content in multi-turn messages.",
+                "impact": "Root cause isolated and reported upstream with a reproduction, so other teams hitting the same leak had a documented explanation"
+            },
             "sveltekit": {
                 "name": "sveltejs/kit",
                 "description": "Validation of the ORIGIN environment variable at startup in adapter-node, from an issue I reported about misleading 400 Bad Request responses.",

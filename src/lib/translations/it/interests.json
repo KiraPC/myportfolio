@@ -20,6 +20,11 @@
                 "description": "Framework per agenti AI. Contributi al core: AWS credential provider chain per S3, propagazione dell’abort signal dal parent ai sub-agent delegati, provider metadata esposti agli output processor.",
                 "impact": "Fix e feature mergiate a monte mentre costruivo agenti in produzione, evitando al team di mantenere patch locali"
             },
+            "vercelAi": {
+                "name": "vercel/ai",
+                "description": "Analizzato e documentato un bug nel provider Amazon Bedrock: i tag <reasoning> finivano nel testo della risposta durante il tool use multi-turn, con proposta di fix per il reasoning content non firmato nei messaggi multi-turn.",
+                "impact": "Causa isolata e segnalata a monte con una riproduzione, così chi incontra lo stesso problema trova una spiegazione documentata"
+            },
             "sveltekit": {
                 "name": "sveltejs/kit",
                 "description": "Validazione della variabile d’ambiente ORIGIN all’avvio in adapter-node, nata da una mia issue sulle risposte 400 Bad Request poco comprensibili.",

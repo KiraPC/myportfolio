@@ -42,6 +42,13 @@ export const load = async () => {
                     impact: 'interests.upstream.projects.mastra.impact'
                 },
                 {
+                    name: 'interests.upstream.projects.vercelAi.name',
+                    description: 'interests.upstream.projects.vercelAi.description',
+                    technologies: ['TypeScript', 'AI SDK', 'Amazon Bedrock', 'LLM'],
+                    link: 'https://github.com/vercel/ai/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.vercelAi.impact'
+                },
+                {
                     name: 'interests.upstream.projects.sveltekit.name',
                     description: 'interests.upstream.projects.sveltekit.description',
                     technologies: ['TypeScript', 'SvelteKit', 'adapter-node'],
