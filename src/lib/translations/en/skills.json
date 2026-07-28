@@ -99,7 +99,7 @@
                     "description": "API Gateway, custom middleware, modular architectures"
                 },
                 "fastify": {
-                    "description": "Lightning-fast Node.js web framework, optimized performance"
+                    "description": "Node.js web framework. Merged contributions to the core and to fastify-swagger, fastify-plugin and fast-json-stringify"
                 },
                 "gin": {
                     "description": "Minimalist web framework for Go, efficient routing"
@@ -158,6 +158,12 @@
             "name": "AI Engineering",
             "description": "Methodologies and tools to leverage AI in software development",
             "skills": {
+                "mastra": {
+                    "description": "TypeScript agent framework used to build production AI agents. Merged contributions to the core: AWS credential provider chain, abort signal propagation to sub-agents, provider metadata in output processors"
+                },
+                "rag": {
+                    "description": "Document ingestion and chunking, embedding generation, hybrid search on OpenSearch combining vector and BM25 with semantic re-ranking"
+                },
                 "agentCoding": {
                     "description": "AI-assisted development using coding agents, automated code generation and refactoring"
                 },

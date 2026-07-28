@@ -99,7 +99,7 @@
                     "description": "API Gateway, middleware personalizzati, architetture modulari"
                 },
                 "fastify": {
-                    "description": "Framework web velocissimo per Node.js, performance ottimizzate"
+                    "description": "Web framework per Node.js. Contributi mergiati nel core e in fastify-swagger, fastify-plugin e fast-json-stringify"
                 },
                 "gin": {
                     "description": "Framework web minimalista per Go, routing efficiente"
@@ -158,6 +158,12 @@
             "name": "AI Engineering",
             "description": "Metodologie e strumenti per sfruttare l'AI nello sviluppo software",
             "skills": {
+                "mastra": {
+                    "description": "Framework TypeScript per agenti AI in produzione. Contributi mergiati nel core: AWS credential provider chain, propagazione dell'abort signal ai sub-agent, provider metadata negli output processor"
+                },
+                "rag": {
+                    "description": "Ingestion e chunking dei documenti, generazione degli embedding, hybrid search su OpenSearch che combina vettoriale e BM25 con re-ranking semantico"
+                },
                 "agentCoding": {
                     "description": "Sviluppo assistito da AI tramite coding agent, generazione e refactoring automatico del codice"
                 },
