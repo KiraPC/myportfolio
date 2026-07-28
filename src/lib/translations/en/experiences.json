@@ -11,12 +11,17 @@
     "nearform": {
         "role": "Senior Software Engineer",
         "period": "January 2026 - present",
-        "description": "Development of innovative software solutions for enterprise clients in a consultancy environment. Participation in challenging projects using cutting-edge technologies, with focus on scalable architectures, performance optimization and delivery of high-quality software.",
+        "description": "Development of AI agents and Retrieval-Augmented Generation systems for enterprise clients in a consultancy environment. Ownership of architectural decisions and end-to-end delivery, from the document ingestion pipeline through to the production release, alongside technical lead responsibilities on the project: running client alignment sessions, coordinating the team and driving architectural decisions. Author of a technical article on agent instruction drift published on Nearform's Digital Community.",
         "projects": {
             "aiAgent": {
-                "name": "AI Agent with RAG System",
-                "description": "Design and development of an intelligent AI agent leveraging Retrieval-Augmented Generation (RAG) architecture. The system combines large language models with efficient document retrieval to provide accurate, context-aware responses. Implementation of vector databases for semantic search, document chunking strategies, and prompt engineering techniques to optimize response quality and relevance.",
-                "impact": "Development of a scalable AI solution capable of processing and understanding large document corpora, providing accurate and contextually relevant responses to complex queries."
+                "name": "AI Search Agents with RAG Architecture",
+                "description": "Design and delivery of AI agents built on Mastra for search over large corporate content bases. The first version is in production: it searches the client's indexed content and suggests the most relevant pages for a user's question, with RAG-style retrieval on OpenSearch. The second version extends this to several OpenSearch indices through a hybrid search pipeline that combines vector search and BM25 with semantic re-ranking. I designed and built the entire document ingestion pipeline end to end — multi-format parsing, chunking, embedding generation and indexing into OpenSearch, fully serverless — along with the index mapping strategy and the event-driven Lambda architecture.",
+                "impact": "Shipped to production with a 100% end-to-end indexing success rate across the supported document formats. First delivery phase accepted by the client with no rework requested."
+            },
+            "agentOptimization": {
+                "name": "Agent Cost and Performance Optimisation",
+                "description": "Redesign of how the agents reach their data. A sandboxed shell lets the agent pipe OpenSearch queries through JQ and receive back only the JSON it actually needs, instead of loading whole result sets into the context window. Combined with prompt caching, pruning of stale tool results inside the agent loop, and a dedicated semantic index for schema discovery, so the model is given only the relevant fields rather than the entire mapping.",
+                "impact": "Cost and token consumption per query reduced by close to an order of magnitude, with answer accuracy improving at the same time thanks to the lower pressure on the context window. Production rollout designed on AWS Bedrock AgentCore Runtime."
             }
         }
     },
