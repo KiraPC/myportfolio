@@ -111,6 +111,11 @@
             "Study of emerging technologies (Web3, IoT, Edge Computing)"
         ],
         "projects": {
+            "gullivr": {
+                "name": "Gullivr — app on ChatGPT",
+                "description": "Collaborative trip planner, published as an app on the OpenAI platform. Plan day-by-day itineraries, flights, places to stay, shared expenses and packing lists, either from the web app or by asking ChatGPT directly. Exposes 46 MCP tools, each with declared safety annotations.",
+                "impact": "Passed OpenAI review and is available inside ChatGPT: an entire product controllable in natural language, without leaving the conversation"
+            },
             "aiFaq": {
                 "name": "AI FAQ Chatbot (MongoDB Hackathon Winner)",
                 "description": "Intelligent chatbot for corporate FAQs using MongoDB Atlas Vector Search and FireworksAI.",
