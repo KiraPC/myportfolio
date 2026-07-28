@@ -161,6 +161,26 @@ export const load = async () => {
                 'interests.innovation.details.1',
                 'interests.innovation.details.2',
                 'interests.innovation.details.3'
+            ],
+            projects: [
+                {
+                    name: 'interests.innovation.projects.gullivr.name',
+                    description: 'interests.innovation.projects.gullivr.description',
+                    technologies: ['SvelteKit', 'Svelte 5', 'Supabase', 'MCP', 'OpenAI Apps SDK', 'Vercel'],
+                    impact: 'interests.innovation.projects.gullivr.impact'
+                },
+                {
+                    name: 'interests.innovation.projects.aiFaq.name',
+                    description: 'interests.innovation.projects.aiFaq.description',
+                    technologies: ['MongoDB Atlas', 'Vector Search', 'FireworksAI', 'Python'],
+                    impact: 'interests.innovation.projects.aiFaq.impact'
+                },
+                {
+                    name: 'interests.innovation.projects.smartTeacher.name',
+                    description: 'interests.innovation.projects.smartTeacher.description',
+                    technologies: ['Google Assistant', 'Google Home', 'Node.js'],
+                    impact: 'interests.innovation.projects.smartTeacher.impact'
+                }
             ]
         },
         {
