@@ -5,12 +5,49 @@
         "title": "Interests & Passions",
         "description": "What motivates me, inspires me and guides my professional and personal growth"
     },
+    "upstream": {
+        "title": "Upstream Open Source Contributions",
+        "description": "More than 40 merged pull requests to the projects I use every day. When I hit a limit, I fix it at the source instead of building a workaround.",
+        "details": [
+            "Merged contributions to Mastra, SvelteKit, Node.js undici and Home Assistant",
+            "Merged contributions across the Fastify ecosystem",
+            "Documented issues and reproductions before proposing a fix",
+            "Fixes contributed back rather than kept as local patches"
+        ],
+        "projects": {
+            "mastra": {
+                "name": "mastra-ai/mastra",
+                "description": "AI agent framework. Contributions to the core: AWS credential provider chain for S3, abort signal propagation from parent to delegated sub-agents, provider metadata surfaced to output processors.",
+                "impact": "Fixes and features merged upstream while building production agents, so the team avoided maintaining local patches"
+            },
+            "sveltekit": {
+                "name": "sveltejs/kit",
+                "description": "Validation of the ORIGIN environment variable at startup in adapter-node, from an issue I reported about misleading 400 Bad Request responses.",
+                "impact": "Turns a confusing runtime failure into a clear error at boot for every adapter-node user"
+            },
+            "homeAssistant": {
+                "name": "home-assistant/core + blinkpy",
+                "description": "Reimplemented the Blink authentication flow upstream when the vendor changed it: new OAuth flow, OTP handling via the mobile app, proper error on invalid credentials. Then propagated the fix into Home Assistant core.",
+                "impact": "Restored working camera integration for Home Assistant users after the vendor broke the previous login flow"
+            },
+            "undici": {
+                "name": "nodejs/undici",
+                "description": "Handling of the maxCachedSessions option in the connect class, plus additional test coverage for errors and the client.",
+                "impact": "Merged into the HTTP client used by Node.js itself"
+            },
+            "fastify": {
+                "name": "Fastify ecosystem",
+                "description": "Type definitions for clientErrorHandler and Fastify-typed req/res in the serializer log, support for additionalItems in arrays and enum handling in fast-json-stringify, option to hide untagged routes in fastify-swagger.",
+                "impact": "Contributions merged across fastify, fastify-plugin, fastify-swagger and fast-json-stringify"
+            }
+        }
+    },
     "openSource": {
         "title": "Open Source & Community",
         "description": "Actively contributing to the tech community through open source projects and knowledge sharing.",
         "details": [
-            "Development and maintenance of open source libraries",
-            "Participation in technical discussions on GitHub",
+            "Development and maintenance of open source libraries, over 200 stars on GitHub",
+            "Documented issues and technical discussions on GitHub",
             "Mentoring junior developers",
             "Contributions to existing community projects"
         ],
@@ -24,6 +61,16 @@
                 "name": "vite-plugin-sveltekit-decorators",
                 "description": "Vite plugin that automatically decorates SvelteKit functions with decorators, enhancing code organization and readability.",
                 "impact": "Improves code organization in SvelteKit projects by automatically applying decorators to functions, reducing boilerplate and enhancing readability"
+            },
+            "fastapiMvcBoilerplate": {
+                "name": "fastapi-mvc-boilerplate",
+                "description": "Reference FastAPI project implementing the MVC pattern, used as a starting point for new services.",
+                "impact": "27 stars and 5 forks: a ready-made structure for teams starting a FastAPI project"
+            },
+            "vscodeMastraTraceViewer": {
+                "name": "vscode-mastra-trace-viewer",
+                "description": "Visual Studio Code extension to explore and analyse trace data from Mastra AI agents and workflows.",
+                "impact": "Makes agent traces readable inside the editor, without switching to an external tool"
             }
         }
     },
