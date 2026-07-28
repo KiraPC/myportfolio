@@ -71,6 +71,7 @@ export const load = async () => {
             icon: '🚀',
             description: 'skills.categories.frameworks.description',
             skills: [
+                { name: 'Mastra', level: 90, category: 'ai', years: 1, description: 'skills.categories.frameworks.skills.mastra.description' },
                 { name: 'SvelteKit', level: 90, category: 'frontend', years: 2, description: 'skills.categories.frameworks.skills.sveltekit.description' },
                 { name: 'FastAPI', level: 85, category: 'backend', years: 3, description: 'skills.categories.frameworks.skills.fastapi.description' },
                 { name: 'Spring Boot', level: 85, category: 'backend', years: 4, description: 'skills.categories.frameworks.skills.springboot.description' },
@@ -109,7 +110,6 @@ export const load = async () => {
             icon: '🤖',
             description: 'skills.categories.aiEngineering.description',
             skills: [
-                { name: 'Mastra', level: 90, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.mastra.description' },
                 { name: 'RAG & Hybrid Search', level: 85, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.rag.description' },
                 { name: 'Agent Coding', level: 80, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.agentCoding.description' },
                 { name: 'BMAD', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.bmad.description' },

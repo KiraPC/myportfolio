@@ -86,6 +86,9 @@
             "name": "Frameworks & Libraries",
             "description": "Framework moderni per lo sviluppo di applicazioni scalabili",
             "skills": {
+                "mastra": {
+                    "description": "Framework TypeScript per costruire agenti AI in produzione: agent, workflow, tool, memory e tracing. Contributi mergiati nel core"
+                },
                 "sveltekit": {
                     "description": "SSR/CSR, routing avanzato, performance optimization"
                 },
@@ -158,9 +161,6 @@
             "name": "AI Engineering",
             "description": "Metodologie e strumenti per sfruttare l'AI nello sviluppo software",
             "skills": {
-                "mastra": {
-                    "description": "Framework TypeScript per agenti AI in produzione. Contributi mergiati nel core: AWS credential provider chain, propagazione dell'abort signal ai sub-agent, provider metadata negli output processor"
-                },
                 "rag": {
                     "description": "Ingestion e chunking dei documenti, generazione degli embedding, hybrid search su OpenSearch che combina vettoriale e BM25 con re-ranking semantico"
                 },
