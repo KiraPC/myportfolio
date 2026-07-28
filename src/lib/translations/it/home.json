@@ -1,10 +1,10 @@
 {
-    "title": "Pasquale Carmine Carbone - Full Stack Software Engineer",
-    "metaDescription": "Portfolio di Pasquale Carmine Carbone, Full Stack Software Engineer specializzato in architetture cloud, microservizi e automazione.",
+    "title": "Pasquale Carmine Carbone - Senior Software Engineer",
+    "metaDescription": "Portfolio di Pasquale Carmine Carbone, Senior Software Engineer specializzato in architetture cloud, microservizi e automazione.",
     "hero": {
         "greeting": "Ciao, sono",
         "name": "Pasquale",
-        "jobTitle": "Full Stack Software Engineer",
+        "jobTitle": "Senior Software Engineer",
         "description": "Sviluppatore appassionato con esperienza in {strong}architetture cloud{/strong}, {strong}microservizi{/strong} e {strong}automazione{/strong}. Specializzato nella progettazione di soluzioni scalabili e innovative.",
         "contactButton": "Contattami",
         "experienceButton": "Scopri le mie esperienze"
