@@ -28,8 +28,14 @@ export const load = async () => {
                 {
                     name: 'experiences.nearform.projects.aiAgent.name',
                     description: 'experiences.nearform.projects.aiAgent.description',
-                    technologies: ['LLM', 'Python', 'Node.js', 'TypeScript', 'Mastra', 'Embedding', 'OpenSearch Vector', 'BMAD', 'SSD'],
+                    technologies: ['LLM', 'Python', 'Node.js', 'TypeScript', 'Mastra', 'Embedding', 'OpenSearch Vector', 'Hybrid Search', 'AWS Lambda', 'BMAD', 'SDD'],
                     impact: 'experiences.nearform.projects.aiAgent.impact'
+                },
+                {
+                    name: 'experiences.nearform.projects.agentOptimization.name',
+                    description: 'experiences.nearform.projects.agentOptimization.description',
+                    technologies: ['Mastra', 'AWS Bedrock', 'AgentCore Runtime', 'OpenSearch', 'JQ', 'Prompt Caching', 'TypeScript'],
+                    impact: 'experiences.nearform.projects.agentOptimization.impact'
                 }
             ]
         },

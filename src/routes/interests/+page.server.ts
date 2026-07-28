@@ -24,6 +24,61 @@ export interface PersonalValue {
 export const load = async () => {
     const interests: Interest[] = [
         {
+            title: 'interests.upstream.title',
+            description: 'interests.upstream.description',
+            icon: '🔀',
+            details: [
+                'interests.upstream.details.0',
+                'interests.upstream.details.1',
+                'interests.upstream.details.2',
+                'interests.upstream.details.3'
+            ],
+            projects: [
+                {
+                    name: 'interests.upstream.projects.mastra.name',
+                    description: 'interests.upstream.projects.mastra.description',
+                    technologies: ['TypeScript', 'AI Agents', 'AWS Bedrock', 'S3'],
+                    link: 'https://github.com/mastra-ai/mastra/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.mastra.impact'
+                },
+                {
+                    name: 'interests.upstream.projects.vercelAi.name',
+                    description: 'interests.upstream.projects.vercelAi.description',
+                    technologies: ['TypeScript', 'AI SDK', 'Amazon Bedrock', 'LLM'],
+                    link: 'https://github.com/vercel/ai/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.vercelAi.impact'
+                },
+                {
+                    name: 'interests.upstream.projects.sveltekit.name',
+                    description: 'interests.upstream.projects.sveltekit.description',
+                    technologies: ['TypeScript', 'SvelteKit', 'adapter-node'],
+                    link: 'https://github.com/sveltejs/kit/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.sveltekit.impact'
+                },
+                {
+                    name: 'interests.upstream.projects.homeAssistant.name',
+                    description: 'interests.upstream.projects.homeAssistant.description',
+                    technologies: ['Python', 'OAuth', 'Home Assistant', 'AsyncIO'],
+                    link: 'https://github.com/fronzbot/blinkpy/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.homeAssistant.impact'
+                },
+                {
+                    name: 'interests.upstream.projects.undici.name',
+                    description: 'interests.upstream.projects.undici.description',
+                    technologies: ['Node.js', 'HTTP', 'TLS'],
+                    link: 'https://github.com/nodejs/undici/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.undici.impact'
+                },
+                {
+                    name: 'interests.upstream.projects.fastify.name',
+                    description: 'interests.upstream.projects.fastify.description',
+                    technologies: ['Node.js', 'TypeScript', 'JSON Schema', 'OpenAPI'],
+                    link: 'https://github.com/fastify/fastify/pulls?q=is%3Apr+author%3AKiraPC',
+                    impact: 'interests.upstream.projects.fastify.impact'
+                }
+            ]
+        },
+        {
             title: 'interests.openSource.title',
             description: 'interests.openSource.description',
             icon: '🌐',
@@ -53,6 +108,20 @@ export const load = async () => {
                     technologies: ['Python', 'FastAPI', 'Pydantic', 'Poetry'],
                     link: 'https://github.com/KiraPC/fastapi-router-controller',
                     impact: 'interests.openSource.projects.fastapiController.impact'
+                },
+                {
+                    name: 'interests.openSource.projects.fastapiMvcBoilerplate.name',
+                    description: 'interests.openSource.projects.fastapiMvcBoilerplate.description',
+                    technologies: ['Python', 'FastAPI', 'MVC', 'Docker'],
+                    link: 'https://github.com/KiraPC/fastapi-mvc-boilerplate',
+                    impact: 'interests.openSource.projects.fastapiMvcBoilerplate.impact'
+                },
+                {
+                    name: 'interests.openSource.projects.vscodeMastraTraceViewer.name',
+                    description: 'interests.openSource.projects.vscodeMastraTraceViewer.description',
+                    technologies: ['TypeScript', 'VS Code API', 'Mastra', 'Observability'],
+                    link: 'https://github.com/KiraPC/vscode-mastra-trace-viewer',
+                    impact: 'interests.openSource.projects.vscodeMastraTraceViewer.impact'
                 },
             ]
         },

@@ -5,12 +5,54 @@
         "title": "Interessi & Passioni",
         "description": "Ciò che mi motiva, mi ispira e guida la mia crescita professionale e personale"
     },
+    "upstream": {
+        "title": "Contributi Open Source Upstream",
+        "description": "Oltre 40 pull request mergiate nei progetti che uso ogni giorno. Quando incontro un limite lo risolvo alla fonte, invece di costruirci intorno un workaround.",
+        "details": [
+            "Contributi mergiati in Mastra, SvelteKit, undici di Node.js e Home Assistant",
+            "Contributi mergiati nell’ecosistema Fastify",
+            "Issue documentate e riproduzioni prima di proporre una fix",
+            "Fix contribuite a monte invece di restare patch locali"
+        ],
+        "projects": {
+            "mastra": {
+                "name": "mastra-ai/mastra",
+                "description": "Framework per agenti AI. Contributi al core: AWS credential provider chain per S3, propagazione dell’abort signal dal parent ai sub-agent delegati, provider metadata esposti agli output processor.",
+                "impact": "Fix e feature mergiate a monte mentre costruivo agenti in produzione, evitando al team di mantenere patch locali"
+            },
+            "vercelAi": {
+                "name": "vercel/ai",
+                "description": "Analizzato e documentato un bug nel provider Amazon Bedrock: i tag <reasoning> finivano nel testo della risposta durante il tool use multi-turn, con proposta di fix per il reasoning content non firmato nei messaggi multi-turn.",
+                "impact": "Causa isolata e segnalata a monte con una riproduzione, così chi incontra lo stesso problema trova una spiegazione documentata"
+            },
+            "sveltekit": {
+                "name": "sveltejs/kit",
+                "description": "Validazione della variabile d’ambiente ORIGIN all’avvio in adapter-node, nata da una mia issue sulle risposte 400 Bad Request poco comprensibili.",
+                "impact": "Trasforma un errore a runtime difficile da diagnosticare in un errore chiaro all’avvio, per tutti gli utenti di adapter-node"
+            },
+            "homeAssistant": {
+                "name": "home-assistant/core + blinkpy",
+                "description": "Reimplementata a monte l’autenticazione Blink quando il produttore l’ha cambiata: nuovo flusso OAuth, gestione dell’OTP via app mobile, errore esplicito su credenziali non valide. Fix poi propagata nel core di Home Assistant.",
+                "impact": "Integrazione delle telecamere tornata funzionante per gli utenti Home Assistant dopo il cambio di login lato produttore"
+            },
+            "undici": {
+                "name": "nodejs/undici",
+                "description": "Gestione dell’opzione maxCachedSessions nella connect class, più nuovi test su errori e client.",
+                "impact": "Contributi mergiati nel client HTTP usato da Node.js stesso"
+            },
+            "fastify": {
+                "name": "Ecosistema Fastify",
+                "description": "Type definition per clientErrorHandler e req/res tipizzati come oggetti Fastify nel serializer log, supporto ad additionalItems negli array e gestione degli enum in fast-json-stringify, opzione per nascondere le route senza tag in fastify-swagger.",
+                "impact": "Contributi mergiati in fastify, fastify-plugin, fastify-swagger e fast-json-stringify"
+            }
+        }
+    },
     "openSource": {
         "title": "Open Source & Community",
         "description": "Contribuisco attivamente alla community tech attraverso progetti open source e condivisione delle conoscenze.",
         "details": [
-            "Sviluppo e mantenimento di librerie open source",
-            "Partecipazione a discussioni tecniche su GitHub",
+            "Sviluppo e mantenimento di librerie open source, oltre 200 stelle su GitHub",
+            "Issue documentate e discussioni tecniche su GitHub",
             "Mentoring di sviluppatori junior",
             "Contributi a progetti esistenti della community"
         ],
@@ -24,6 +66,16 @@
                 "name": "vite-plugin-sveltekit-decorators",
                 "description": "Plugin Vite che aggiunge automaticamente decorator alle funzioni SvelteKit, migliorando l'organizzazione e la leggibilità del codice.",
                 "impact": "Migliora l'organizzazione del codice nei progetti SvelteKit applicando automaticamente i decorator alle funzioni, riducendo il boilerplate e aumentando la leggibilità"
+            },
+            "fastapiMvcBoilerplate": {
+                "name": "fastapi-mvc-boilerplate",
+                "description": "Progetto FastAPI di riferimento che implementa il pattern MVC, usato come punto di partenza per nuovi servizi.",
+                "impact": "27 stelle e 5 fork: una struttura pronta per chi inizia un progetto FastAPI"
+            },
+            "vscodeMastraTraceViewer": {
+                "name": "vscode-mastra-trace-viewer",
+                "description": "Estensione per Visual Studio Code che permette di esplorare e analizzare i trace degli agenti e dei workflow Mastra.",
+                "impact": "Rende leggibili i trace degli agenti dentro l’editor, senza passare da uno strumento esterno"
             }
         }
     },

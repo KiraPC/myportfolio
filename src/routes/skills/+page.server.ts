@@ -26,7 +26,7 @@ export const load = async () => {
             title: 'skills.expertise.aiEngineering.title',
             description: 'skills.expertise.aiEngineering.description',
             icon: '🤖',
-            technologies: ['Agent Coding', 'BMAD', 'SDD', 'Context Management', 'Prompt Engineering']
+            technologies: ['Mastra', 'RAG', 'Agent Coding', 'BMAD', 'SDD', 'Context Management', 'Prompt Engineering']
         },
         {
             title: 'skills.expertise.fullStack.title',
@@ -60,7 +60,7 @@ export const load = async () => {
             icon: '💻',
             description: 'skills.categories.programming.description',
             skills: [
-                { name: 'JavaScript/TypeScript', level: 95, category: 'frontend', years: 7, description: 'skills.categories.programming.skills.javascript.description' },
+                { name: 'JavaScript/TypeScript', level: 95, category: 'frontend', years: 9, description: 'skills.categories.programming.skills.javascript.description' },
                 { name: 'Python', level: 90, category: 'backend', years: 5, description: 'skills.categories.programming.skills.python.description' },
                 { name: 'Java', level: 85, category: 'backend', years: 6, description: 'skills.categories.programming.skills.java.description' },
                 { name: 'Go', level: 70, category: 'backend', years: 3, description: 'skills.categories.programming.skills.go.description' },
@@ -71,11 +71,12 @@ export const load = async () => {
             icon: '🚀',
             description: 'skills.categories.frameworks.description',
             skills: [
+                { name: 'Mastra', level: 90, category: 'ai', years: 1, description: 'skills.categories.frameworks.skills.mastra.description' },
                 { name: 'SvelteKit', level: 90, category: 'frontend', years: 2, description: 'skills.categories.frameworks.skills.sveltekit.description' },
                 { name: 'FastAPI', level: 85, category: 'backend', years: 3, description: 'skills.categories.frameworks.skills.fastapi.description' },
                 { name: 'Spring Boot', level: 85, category: 'backend', years: 4, description: 'skills.categories.frameworks.skills.springboot.description' },
                 { name: 'Express.js', level: 80, category: 'backend', years: 5, description: 'skills.categories.frameworks.skills.express.description' },
-                { name: 'Fastify', level: 60, category: 'backend', years: 2, description: 'skills.categories.frameworks.skills.fastify.description' },
+                { name: 'Fastify', level: 85, category: 'backend', years: 2, description: 'skills.categories.frameworks.skills.fastify.description' },
                 { name: 'Gin', level: 70, category: 'backend', years: 3, description: 'skills.categories.frameworks.skills.gin.description' },
                 { name: 'React', level: 50, category: 'frontend', years: 3, description: 'skills.categories.frameworks.skills.react.description' }
             ]
@@ -109,6 +110,7 @@ export const load = async () => {
             icon: '🤖',
             description: 'skills.categories.aiEngineering.description',
             skills: [
+                { name: 'RAG & Hybrid Search', level: 85, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.rag.description' },
                 { name: 'Agent Coding', level: 80, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.agentCoding.description' },
                 { name: 'BMAD', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.bmad.description' },
                 { name: 'SDD', level: 75, category: 'ai', years: 1, description: 'skills.categories.aiEngineering.skills.sdd.description' },
@@ -121,10 +123,10 @@ export const load = async () => {
             icon: '🛠️',
             description: 'skills.categories.tools.description',
             skills: [
-                { name: 'Git', level: 90, category: 'tools', years: 7, description: 'skills.categories.tools.skills.git.description' },
+                { name: 'Git', level: 90, category: 'tools', years: 9, description: 'skills.categories.tools.skills.git.description' },
                 { name: 'Jenkins', level: 90, category: 'tools', years: 7, description: 'skills.categories.tools.skills.jenkins.description' },
-                { name: 'Apache Spark', level: 70, category: 'bigdata', years: 2, description: 'skills.categories.tools.skills.spark.description' },
-                { name: 'Databricks', level: 75, category: 'bigdata', years: 5, description: 'skills.categories.tools.skills.databricks.description' },
+                { name: 'Apache Spark', level: 70, category: 'bigdata', years: 3, description: 'skills.categories.tools.skills.spark.description' },
+                { name: 'Databricks', level: 75, category: 'bigdata', years: 3, description: 'skills.categories.tools.skills.databricks.description' },
                 { name: 'Agile/Scrum', level: 75, category: 'methodology', years: 5, description: 'skills.categories.tools.skills.agile.description' },
                 { name: 'Test Automation', level: 80, category: 'testing', years: 4, description: 'skills.categories.tools.skills.testing.description' },
                 { name: 'API Design', level: 85, category: 'architecture', years: 5, description: 'skills.categories.tools.skills.api.description' },

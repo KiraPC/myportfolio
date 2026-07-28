@@ -1,6 +1,6 @@
 {
     "title": "Esperienze Lavorative",
-    "metaDescription": "Scopri le mie esperienze lavorative come Full Stack Software Engineer: progetti realizzati, tecnologie utilizzate e competenze acquisite.",
+    "metaDescription": "Scopri le mie esperienze lavorative come Senior Software Engineer: progetti realizzati, tecnologie utilizzate e competenze acquisite.",
     "subtitle": "Un percorso professionale ricco di sfide tecniche, innovazione e crescita continua attraverso progetti di grande impatto e tecnologie all'avanguardia.",
     "mainProjects": "Progetti principali",
     "impact": "Impatto",
@@ -11,12 +11,17 @@
     "nearform": {
         "role": "Senior Software Engineer",
         "period": "Gennaio 2026 - presente",
-        "description": "Sviluppo di soluzioni software innovative per clienti enterprise in ambiente di consulenza. Partecipazione a progetti sfidanti utilizzando tecnologie all'avanguardia, con focus su architetture scalabili, ottimizzazione delle performance e delivery di software di alta qualità.",
+        "description": "Sviluppo di agenti AI e sistemi Retrieval-Augmented Generation per clienti enterprise in ambito consulenziale. Ownership delle decisioni architetturali e della delivery end-to-end, dalla pipeline di ingestion documentale fino al rilascio in produzione, insieme a responsabilità di technical lead sul progetto: conduzione delle sessioni di allineamento con il cliente, coordinamento del team e guida delle scelte architetturali. Autore di un articolo tecnico sull'instruction drift degli agenti pubblicato sulla Digital Community di Nearform.",
         "projects": {
             "aiAgent": {
-                "name": "Agente AI con Sistema RAG",
-                "description": "Progettazione e sviluppo di un agente AI intelligente basato su architettura Retrieval-Augmented Generation (RAG). Il sistema combina large language models con recupero efficiente di documenti per fornire risposte accurate e contestualizzate. Implementazione di vector database per ricerca semantica, strategie di chunking dei documenti e tecniche di prompt engineering per ottimizzare qualità e rilevanza delle risposte.",
-                "impact": "Sviluppo di una soluzione AI scalabile capace di processare e comprendere grandi corpora documentali, fornendo risposte accurate e contestualmente rilevanti a query complesse."
+                "name": "Agenti AI di ricerca con architettura RAG",
+                "description": "Progettazione e delivery di agenti AI costruiti su Mastra per la ricerca su grandi basi di contenuti aziendali. La prima versione è in produzione: cerca tra i contenuti indicizzati del cliente e suggerisce le pagine più utili rispetto alla domanda dell'utente, con retrieval in stile RAG su OpenSearch. La seconda versione trasforma l'agente in un'interfaccia in linguaggio naturale su un cluster OpenSearch multi-indice: scopre a runtime gli indici disponibili, traduce la domanda dell'utente in OpenSearch Query DSL e la esegue su documenti e commentary editoriale, combinando ricerca vettoriale e BM25 in una hybrid pipeline con re-ranking semantico. Per tenere snello il contesto del modello a fronte di mapping schema molto grandi, la scoperta dei campi passa da un indice semantico dedicato che espone solo quelli rilevanti per la singola query. Ho progettato e realizzato interamente la pipeline di ingestion documentale end-to-end — parsing multi-formato, chunking, generazione degli embedding e indicizzazione su OpenSearch, completamente serverless — insieme alla strategia di index mapping e all'architettura event-driven a Lambda.",
+                "impact": "Rilasciato in produzione con un indexing success rate end-to-end del 100% sui formati documentali supportati. Prima fase di delivery accettata dal cliente senza richieste di rilavorazione."
+            },
+            "agentOptimization": {
+                "name": "Ottimizzazione di costi e performance degli agenti",
+                "description": "Ridisegno del modo in cui gli agenti accedono ai dati. Una sandbox con accesso shell permette all'agente di far passare le query OpenSearch attraverso JQ e ricevere solo il JSON che gli serve davvero, invece di caricare interi result set nel context window. Il tutto combinato con prompt caching, pulizia dei risultati dei tool non più utili all'interno dell'agent loop, e un indice semantico dedicato alla schema discovery, così al modello arrivano solo i campi rilevanti e non l'intero mapping.",
+                "impact": "Costo e consumo di token per query ridotti di quasi un ordine di grandezza, con un miglioramento contestuale dell'accuratezza delle risposte grazie alla minore pressione sul context window. Rollout in produzione progettato su AWS Bedrock AgentCore Runtime."
             }
         }
     },

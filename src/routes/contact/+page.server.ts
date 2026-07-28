@@ -39,7 +39,7 @@ const emailTemplates = new Map([
 					<p style="line-height: 1.6; color: #374151;">
 						A presto,<br>
 						<strong>Pasquale Carmine Carbone</strong><br>
-						Full Stack Software Engineer
+						Senior Software Engineer
 					</p>
 					
 					<div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
@@ -80,7 +80,7 @@ const emailTemplates = new Map([
 					<p style="line-height: 1.6; color: #374151;">
 						Best regards,<br>
 						<strong>Pasquale Carmine Carbone</strong><br>
-						Full Stack Software Engineer
+						Senior Software Engineer
 					</p>
 					
 					<div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
